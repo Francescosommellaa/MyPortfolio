@@ -2,6 +2,8 @@
 
 Questo repository contiene il codice sorgente del mio portfolio personale. È stato progettato per mostrare i miei lavori, le competenze e fornire un modo semplice per contattarmi.
 
+---
+
 ## Tecnologie Utilizzate
 
 - **React.js**: Libreria per la creazione di interfacce utente.
@@ -18,8 +20,6 @@ Questo repository contiene il codice sorgente del mio portfolio personale. È st
 ---
 
 ## Struttura del Progetto
-
----
 
 Configurazione del Progetto
 Prerequisiti
@@ -88,7 +88,6 @@ src/
 
 ## Funzionalità Principali
 
----
 
 Navigazione Dinamica: Navigazione tra le pagine tramite react-router-dom.
 Responsive Design: Layout ottimizzato per desktop, tablet e mobile.
@@ -99,7 +98,6 @@ Animazioni: Animazioni fluide con Framer Motion.
 
 ## Come Contribuire
 
----
 
 ### Se vuoi contribuire:
 
@@ -129,7 +127,6 @@ Apri una pull request.
 
 ## Contatti
 
----
 Email: info@francescosommella.design
 
 Portfolio Live: https://francescosommella.design
