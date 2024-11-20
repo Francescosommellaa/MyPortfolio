@@ -10,20 +10,30 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@axe-core/react": "^4.10.1",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "framer-motion": "^11.11.17",
+    "lodash": "^4.17.21",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-lazy-load-image-component": "^1.6.2",
+    "react-router-dom": "^6.28.0",
+    "sass": "^1.81.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
+    "@eslint/js": "^9.15.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^9.13.0",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react-swc": "^3.7.1",
+    "eslint": "^9.15.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
-    "globals": "^15.11.0",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "^8.11.0",
-    "vite": "^5.4.10"
+    "globals": "^15.12.0",
+    "typescript": "~5.6.3",
+    "typescript-eslint": "^8.15.0",
+    "vite": "^5.4.11"
   }
 }
