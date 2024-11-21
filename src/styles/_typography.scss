@@ -1,0 +1,33 @@
+// Fonts Family
+$font-title: "DM Sans", sans-serif;
+$font-body: "Nunito Sans", sans-serif;
+
+// Titles
+$h1-font-size: 58px;
+$h1-line-height: 120%;
+$h2-font-size: 44px;
+$h2-line-height: 120%;
+$h3-font-size: 32px;
+$h3-line-height: 110%;
+$h4-font-size: 24px;
+$h4-line-height: 120%;
+$h5-font-size: 18px;
+$h5-line-height: 120%;
+$h6-font-size: 14px;
+$h6-line-height: 100%;
+
+// Subtitles
+$subtitle-big-font-size: 28px;
+$subtitle-big-line-height: auto;
+$subtitle-small-font-size: 22px;
+$subtitle-small-line-height: auto;
+
+// Text
+$text-paragraph-big-font-size: 18px;
+$text-paragraph-big-line-height: 100%;
+$text-paragraph-small-font-size: 14px;
+$text-paragraph-small-line-height: auto;
+$text-placeholder-font-size: 12px;
+$text-placeholder-line-height: auto;
+
+@forward "utilities";
