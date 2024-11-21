@@ -13,7 +13,6 @@ import Progetto from "./pages/Progetto/Progetto";
 const App: React.FC = () => {
   return (
     <>
-      <CustomCursor />
       <Router>
         <Navbar />
         <Routes>
