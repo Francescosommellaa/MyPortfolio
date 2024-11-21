@@ -9,6 +9,7 @@ body {
   background-color: $background-dark;
 }
 
+// Typography
 h1 {
   @include typography(
     $font-title,
@@ -60,5 +61,46 @@ h6 {
     $h6-font-size,
     $h6-line-height,
     $h6-font-weight
+  );
+}
+
+.subtitle-big {
+  @include typography(
+    $font-body,
+    $subtitle-big-font-size,
+    $subtitle-big-line-height,
+    $subtitle-big-font-weight
+  );
+}
+.subtitle-small {
+  @include typography(
+    $font-body,
+    $subtitle-small-font-size,
+    $subtitle-small-line-height,
+    $subtitle-small-font-weight
+  );
+}
+.text-paragraph-big {
+  @include typography(
+    $font-body,
+    $text-paragraph-big-font-size,
+    $text-paragraph-big-line-height,
+    $text-paragraph-big-font-weight
+  );
+}
+.text-paragraph-small {
+  @include typography(
+    $font-body,
+    $text-paragraph-small-font-size,
+    $text-paragraph-small-line-height,
+    $text-paragraph-small-font-weight
+  );
+}
+.text-placeholder {
+  @include typography(
+    $font-body,
+    $text-placeholder-font-size,
+    $text-placeholder-line-height,
+    $text-placeholder-font-weight
   );
 }

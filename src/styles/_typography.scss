@@ -30,13 +30,21 @@ $h6-font-weight: 800;
 // Subtitles
 $subtitle-big-font-size: 28px;
 $subtitle-big-line-height: auto;
+$subtitle-big-font-weight: 600;
+
 $subtitle-small-font-size: 22px;
 $subtitle-small-line-height: auto;
+$subtitle-small-font-weight: 400;
 
 // Text
 $text-paragraph-big-font-size: 18px;
-$text-paragraph-big-line-height: 100%;
+$text-paragraph-big-line-height: auto;
+$text-paragraph-big-font-weight: 400;
+
 $text-paragraph-small-font-size: 14px;
 $text-paragraph-small-line-height: auto;
+$text-paragraph-small-font-weight: 300;
+
 $text-placeholder-font-size: 12px;
 $text-placeholder-line-height: auto;
+$text-placeholder-font-weight: 200;

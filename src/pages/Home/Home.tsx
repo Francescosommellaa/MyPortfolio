@@ -1,11 +1,15 @@
 import React from "react";
 import "./Home.scss";
+import Hero from "../../Components/Hero/Hero";
 
 const Home: React.FC = () => {
   return (
-    <div className="home">
-      <h1>Home Page</h1>
-    </div>
+    <>
+      <Hero />
+      <div className="home">
+        <h1>Home Page</h1>
+      </div>
+    </>
   );
 };
 
