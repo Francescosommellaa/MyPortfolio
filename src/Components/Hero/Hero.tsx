@@ -4,7 +4,7 @@ import "./Hero.scss";
 const Hero: React.FC = () => {
   return (
     <div className="home">
-      <h1>Hero</h1>
+      <h2>Hero</h2>
     </div>
   );
 };
