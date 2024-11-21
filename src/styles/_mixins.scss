@@ -13,3 +13,17 @@
 @mixin uppercase {
   text-transform: uppercase;
 }
+
+// ====================
+//Mixin per i bottoni seccondari
+@mixin button-secondary($btn-paddings, $btn-font-size, $btn-font-weight) {
+  padding: $btn-paddings;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+}
+
+@mixin button-primary($btn-primary-paddings, $btn-font-size, $btn-font-weight) {
+  padding: $btn-primary-paddings;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+}

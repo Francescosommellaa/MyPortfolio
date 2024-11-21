@@ -157,3 +157,30 @@ $stroke-l: 4px;
 $line-height: 1;
 $line-height-1: 1.2;
 $line-height-2: 1.4;
+
+// ====================
+// Buttons
+$btn-font-size: (
+  xs: 14px,
+  s: 18px,
+  m: 24px,
+  l: 32px,
+);
+$btn-font-weight: (
+  xs: 800,
+  s: 800,
+  m: 700,
+  l: 700,
+);
+$btn-paddings: (
+  xs: 8px 24px,
+  s: 8px 24px,
+  m: 16px 12px,
+  l: 40px 14px,
+);
+$btn-primary-paddings: (
+  xs: 30px 10px,
+  s: 36px 12px,
+  m: 48px 15px,
+  l: 60px 16px,
+);

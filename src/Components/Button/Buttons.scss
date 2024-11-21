@@ -1,0 +1,109 @@
+@use "../../styles/general" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.btn-secondary {
+  background-color: $background-dark;
+  color: $gray-scale-2;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: $gray-scale--1;
+  }
+  &-xs {
+    @include button-secondary(
+      map-get($btn-paddings, xs),
+      map-get($btn-font-size, xs),
+      map-get($btn-font-weight, xs)
+    );
+  }
+  &-s {
+    @include button-secondary(
+      map-get($btn-paddings, s),
+      map-get($btn-font-size, s),
+      map-get($btn-font-weight, s)
+    );
+  }
+
+  &-m {
+    @include button-secondary(
+      map-get($btn-paddings, m),
+      map-get($btn-font-size, m),
+      map-get($btn-font-weight, m)
+    );
+  }
+
+  &-l {
+    @include button-secondary(
+      map-get($btn-paddings, l),
+      map-get($btn-font-size, l),
+      map-get($btn-font-weight, l)
+    );
+  }
+
+  .btn-icon {
+    &-xs {
+      width: 10px;
+      height: 10px;
+    }
+
+    &-s {
+      width: 12px;
+      height: 12px;
+    }
+
+    &-m {
+      width: 18px;
+      height: 18px;
+    }
+
+    &-l {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.btn-primary {
+  background-color: $background-light;
+  color: $gray-scale-10;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $brand-primary-10;
+    color: $gray-scale--1;
+  }
+  &-xs {
+    @include button-primary(
+      map-get($btn-primary-paddings, xs),
+      map-get($btn-font-size, xs),
+      map-get($btn-font-weight, xs)
+    );
+  }
+  &-s {
+    @include button-primary(
+      map-get($btn-primary-paddings, s),
+      map-get($btn-font-size, s),
+      map-get($btn-font-weight, s)
+    );
+  }
+
+  &-m {
+    @include button-primary(
+      map-get($btn-primary-paddings, m),
+      map-get($btn-font-size, m),
+      map-get($btn-font-weight, m)
+    );
+  }
+
+  &-l {
+    @include button-primary(
+      map-get($btn-primary-paddings, l),
+      map-get($btn-font-size, l),
+      map-get($btn-font-weight, l)
+    );
+  }
+}

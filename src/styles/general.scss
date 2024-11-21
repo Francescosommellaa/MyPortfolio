@@ -9,6 +9,19 @@ body {
   background-color: $background-dark;
 }
 
+button {
+  font-family: $font-title;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 // Typography
 h1 {
   @include typography(

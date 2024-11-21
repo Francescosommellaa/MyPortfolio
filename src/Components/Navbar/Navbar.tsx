@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
+import ButtonSecondary from "../Button/ButtonSecondary";
 
 const Navbar: React.FC = () => {
   return (
@@ -15,10 +16,10 @@ const Navbar: React.FC = () => {
         <li>
           <Link to="/lavori">Lavori</Link>
         </li>
-        <li>
-          <Link to="/parliamo">Parliamo</Link>
-        </li>
       </ul>
+      <Link to="/parliamo">
+        <ButtonSecondary size="s" text="Parliamo" />
+      </Link>
     </nav>
   );
 };
