@@ -1,8 +1,9 @@
-@use "../../styles/general";
+@use "../../styles/general" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .navbar {
-  background-color: #f8f9fa;
-  padding: 1rem;
+  background-color: $background-dark;
   ul {
     list-style: none;
     display: flex;
@@ -10,7 +11,7 @@
 
     li a {
       text-decoration: none;
-      color: #333;
+      color: $gray-scale-3;
       font-weight: bold;
 
       &:hover {

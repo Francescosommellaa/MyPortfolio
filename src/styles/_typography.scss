@@ -5,16 +5,27 @@ $font-body: "Nunito Sans", sans-serif;
 // Titles
 $h1-font-size: 58px;
 $h1-line-height: 120%;
+$h1-font-weight: 900;
+
 $h2-font-size: 44px;
 $h2-line-height: 120%;
+$h2-font-weight: 800;
+
 $h3-font-size: 32px;
 $h3-line-height: 110%;
+$h3-font-weight: 800;
+
 $h4-font-size: 24px;
 $h4-line-height: 120%;
+$h4-font-weight: 700;
+
 $h5-font-size: 18px;
 $h5-line-height: 120%;
+$h5-font-weight: 800;
+
 $h6-font-size: 14px;
 $h6-line-height: 100%;
+$h6-font-weight: 800;
 
 // Subtitles
 $subtitle-big-font-size: 28px;
@@ -29,5 +40,3 @@ $text-paragraph-small-font-size: 14px;
 $text-paragraph-small-line-height: auto;
 $text-placeholder-font-size: 12px;
 $text-placeholder-line-height: auto;
-
-@forward "utilities";

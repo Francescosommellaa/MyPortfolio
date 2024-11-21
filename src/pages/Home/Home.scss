@@ -1,1 +1,7 @@
-@use "../../styles/general";
+@use "../../styles/general" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+h1 {
+  color: $gray-scale-4;
+}
