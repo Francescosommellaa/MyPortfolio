@@ -2,11 +2,17 @@
 @use "./mixins" as *;
 @use "./typography" as *;
 
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
   font-family: $font-body;
   background-color: $background-dark;
+  max-width: 1920px;
 }
 
 button {
@@ -23,6 +29,7 @@ li {
 }
 
 // Typography
+
 h1 {
   @include typography(
     $font-title,
