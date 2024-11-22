@@ -4,16 +4,18 @@ import "./Buttons.scss";
 interface ButtonSecondaryProps {
   size: "xs" | "s" | "m" | "l";
   text: string;
-  withIcon?: boolean; // Opzione per rimuovere l'icona
+  withIcon?: boolean;
+  className: string;
 }
 
 const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   size,
   text,
   withIcon = true,
+  className,
 }) => {
   return (
-    <button className={`btn-secondary btn-secondary-${size}`}>
+    <button className={`btn-secondary btn-secondary-${size} ${className}`}>
       {text}
       {withIcon && (
         <svg

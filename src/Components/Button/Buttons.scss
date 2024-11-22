@@ -10,6 +10,10 @@
   align-items: center;
   justify-content: center;
 
+  &.active-button {
+    color: $gray-scale--1;
+  }
+
   &:hover {
     color: $gray-scale--1;
   }
