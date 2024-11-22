@@ -1,25 +1,59 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import ButtonSecondary from "../Button/ButtonSecondary";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
+  const location = useLocation();
+
   return (
     <nav className="navbar">
-      <ul className="navbar-links">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/lavori">Lavori</Link>
-        </li>
-      </ul>
-      <Link to="/parliamo">
-        <ButtonSecondary size="s" text="Parliamo" />
-      </Link>
+      <div className="left-nav">
+        <div className="logo-container">
+          <Link to="/">
+            <h5 className="logo-text">
+              © Design by Fra | © Francesco Sommella
+            </h5>
+          </Link>
+        </div>
+
+        <div className="divider"></div>
+
+        <ul className="nav-links">
+          <li>
+            <Link
+              to="/lavori"
+              className={`nav-link ${
+                location.pathname === "/lavori" ? "active" : ""
+              }`}
+            >
+              <h5>Lavori</h5>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className={`nav-link ${
+                location.pathname === "/about" ? "active" : ""
+              }`}
+            >
+              <h5>About</h5>
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className="right-nav">
+        <Link to="/parliamo">
+          <ButtonSecondary
+            size="s"
+            text="Parliamo"
+            className={`${
+              location.pathname === "/parliamo" ? "active-button" : ""
+            }`}
+          ></ButtonSecondary>
+        </Link>
+      </div>
     </nav>
   );
 };

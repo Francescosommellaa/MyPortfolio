@@ -4,18 +4,90 @@
 
 .navbar {
   background-color: $background-dark;
-  ul {
-    list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 120px;
+
+  .logo-container {
+    max-width: 140px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+
+    .logo-text {
+      color: $gray-scale--1;
+      display: inline-block;
+      position: relative;
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &:hover .logo-text {
+      animation: scroll-left 3s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+  .left-nav {
     display: flex;
-    gap: 1rem;
+    align-items: center;
 
-    li a {
-      text-decoration: none;
-      color: $gray-scale-3;
-      font-weight: bold;
+    .divider {
+      height: 20px;
+      width: 2px;
+      background-color: $gray-scale-5;
+      margin: 0 24px;
+    }
 
-      &:hover {
-        color: $gray-scale--1;
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+
+      .nav-link {
+        position: relative;
+        color: $gray-scale-4;
+        text-decoration: none;
+
+        &:hover {
+          color: $gray-scale--1;
+        }
+
+        &.active {
+          color: $gray-scale--1;
+        }
+
+        &.active::after {
+          content: "";
+          position: absolute;
+          bottom: -12px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 4px;
+          height: 4px;
+          background-color: $gray-scale--1;
+          border-radius: 50%;
+          transition: all 0.3s ease;
+        }
       }
     }
   }
