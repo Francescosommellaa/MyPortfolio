@@ -1,7 +1,10 @@
 import React from "react";
 import "./Navbar.scss";
-import ButtonSecondary from "../Button/ButtonSecondary";
+
 import { Link, useLocation } from "react-router-dom";
+
+// Atoms
+import ButtonSecondary from "../../Atoms/Button/ButtonSecondary";
 
 const Navbar: React.FC = () => {
   const location = useLocation();

@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Footer from "./Components/Footer/Footer";
-import Navbar from "./Components/Navbar/Navbar";
+// Molecules
+import Navbar from "./Components/Molecules/Navbar/Navbar";
+import Footer from "./Components/Molecules/Footer/Footer";
 
+// pages
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Lavori from "./pages/Lavori/Lavori";

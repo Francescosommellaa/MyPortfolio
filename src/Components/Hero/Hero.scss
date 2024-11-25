@@ -1,8 +1,0 @@
-@use "../../styles/general" as *;
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
-
-h2 {
-  color: $brand-primary-8-5;
-  @include uppercase;
-}

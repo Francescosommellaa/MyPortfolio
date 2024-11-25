@@ -1,7 +1,6 @@
-@use "../../styles/general" as *;
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
-
+@use "../../../styles/general" as *;
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
 .btn-secondary {
   background-color: $background-dark;
   color: $gray-scale-2;
