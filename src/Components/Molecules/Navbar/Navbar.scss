@@ -3,7 +3,8 @@
 @use "../../../styles/mixins" as *;
 
 .navbar {
-  background-color: $background-dark;
+  background-color: #0d0d0d31;
+  backdrop-filter: blur(24px);
   display: flex;
   align-items: center;
   justify-content: space-between;
