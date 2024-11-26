@@ -1,0 +1,47 @@
+@use "../../../styles/general" as *;
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.horizontal-rule {
+  border: none;
+  height: 2px;
+  width: 100%;
+  background-color: $gray-scale-8;
+  border-radius: 50%;
+}
+
+.bottom-big {
+  margin-bottom: 120px;
+}
+
+.bottom-medium {
+  margin-bottom: 80px;
+}
+
+.bottom-small {
+  margin-bottom: 40px;
+}
+
+.top-big {
+  margin-top: 120px;
+}
+
+.top-medium {
+  margin-top: 80px;
+}
+
+.top-small {
+  margin-top: 40px;
+}
+
+.big {
+  margin: 120px auto;
+}
+
+.medium {
+  margin: 80px auto;
+}
+
+.small {
+  margin: 40px auto;
+}
