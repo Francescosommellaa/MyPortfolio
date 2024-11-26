@@ -3,8 +3,48 @@
 @use "../../../styles/mixins" as *;
 
 .footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
+  background-color: &gray-scale-9;
+  padding: 24px 120px;
   text-align: center;
+
+  .top-footer {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 80px;
+
+    h1 {
+      color: $gray-scale--1;
+    }
+  }
+
+  .contact-container {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 120px;
+  }
+
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    color: $gray-scale--1;
+
+    span {
+      color: $gray-scale-2;
+    }
+
+    .bottomleft-footer {
+      text-align: left;
+
+      .social-container {
+        display: flex;
+        justify-content: end;
+
+        .social {
+          padding: 0 0.8rem 0 0;
+        }
+      }
+    }
+  }
 }
