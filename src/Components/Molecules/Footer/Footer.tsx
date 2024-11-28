@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.scss";
 
 // atoms
-import ButtonSecondary from "../../Atoms/Button/ButtonSecondary";
+import ButtonSecondary from "../../Atoms/Button/Button";
 import Hr from "../../Atoms/HorizontalRule/Hr";
 
 const Footer: React.FC = () => {

@@ -4,7 +4,7 @@ import "./Navbar.scss";
 import { Link, useLocation } from "react-router-dom";
 
 // Atoms
-import ButtonSecondary from "../../Atoms/Button/ButtonSecondary";
+import ButtonSecondary from "../../Atoms/Button/Button";
 
 const Navbar: React.FC = () => {
   const location = useLocation();

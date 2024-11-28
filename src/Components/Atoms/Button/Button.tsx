@@ -8,14 +8,14 @@ interface ButtonSecondaryProps {
   className: string;
 }
 
-const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
+const Button: React.FC<ButtonSecondaryProps> = ({
   size,
   text,
   withIcon = true,
   className,
 }) => {
   return (
-    <button className={`btn-secondary btn-secondary-${size} ${className}`}>
+    <button className={`btn btn-${size} ${className}`}>
       {text}
       {withIcon && (
         <svg
@@ -33,4 +33,4 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   );
 };
 
-export default ButtonSecondary;
+export default Button;
