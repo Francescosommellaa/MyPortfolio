@@ -43,7 +43,6 @@ npm run lint: Analizza il codice per trovare problemi.
 
 ---
 
-
 ```plaintext
 src/
 ├── assets/             # File statici come immagini
@@ -54,9 +53,6 @@ src/
 │   ├── Footer/
 │   │   ├── Footer.tsx
 │   │   ├── Footer.scss
-│   ├── ProjectFooter/
-│       ├── ProjectFooter.tsx
-│       ├── ProjectFooter.scss
 ├── pages/              # File relativi alle pagine principali
 │   ├── Home/
 │   │   ├── Home.tsx
@@ -64,15 +60,9 @@ src/
 │   ├── About/
 │   │   ├── About.tsx
 │   │   ├── About.scss
-│   ├── Lavori/
-│   │   ├── Lavori.tsx
-│   │   ├── Lavori.scss
 │   ├── Parliamo/
-│   │   ├── Parliamo.tsx
-│   │   ├── Parliamo.scss
-│   ├── Progetto/
-│       ├── Progetto.tsx
-│       ├── Progetto.scss
+│   │    ├── Parliamo.tsx
+│   │    ├── Parliamo.scss
 ├── styles/             # Stili globali e variabili
 │   ├── _variables.scss
 │   ├── _mixins.scss
@@ -88,7 +78,6 @@ src/
 
 ## Funzionalità Principali
 
-
 Navigazione Dinamica: Navigazione tra le pagine tramite react-router-dom.
 Responsive Design: Layout ottimizzato per desktop, tablet e mobile.
 Caricamento Ottimizzato: Immagini caricate dinamicamente con react-lazy-load-image-component.
@@ -98,7 +87,6 @@ Animazioni: Animazioni fluide con Framer Motion.
 
 ## Come Contribuire
 
-
 ### Se vuoi contribuire:
 
 Fai un fork del repository.
@@ -106,6 +94,7 @@ Crea un branch per la tua funzionalità:
 
 ```plaintext
 git checkout -b feature/nome-funzionalità
+
 ```
 
 Fai un commit delle modifiche:
@@ -119,6 +108,7 @@ Esegui un push al tuo branch:
 
 ```plaintext
 git push origin feature/nome-funzionalità
+
 ```
 
 Apri una pull request.
