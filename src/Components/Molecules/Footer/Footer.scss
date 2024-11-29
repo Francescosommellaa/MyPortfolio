@@ -12,7 +12,7 @@
     text-align: left;
     justify-content: space-between;
     align-items: end;
-    margin-top: 80px;
+    margin: 80px 0;
 
     h1 {
       color: $gray-scale--1;
@@ -28,6 +28,7 @@
   .info-container {
     display: flex;
     justify-content: space-between;
+    align-items: last baseline;
     color: $gray-scale--1;
 
     span {
@@ -36,6 +37,10 @@
 
     .bottomleft-footer {
       text-align: left;
+
+      .text-placeholder {
+        @include uppercase;
+      }
 
       .social-container {
         display: flex;
