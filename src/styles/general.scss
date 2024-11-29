@@ -13,114 +13,140 @@ body {
   font-family: $font-body;
   background-color: $background-dark;
   max-width: 1920px;
-}
 
-button {
-  font-family: $font-title;
-  border: none;
-}
+  button {
+    font-family: $font-title;
+    border: none;
+  }
 
-a {
-  text-decoration: none;
-}
+  a {
+    text-decoration: none;
+    color: $gray-scale-6;
+    margin: 0 0.8rem 0 0;
 
-li {
-  list-style: none;
-}
+    &:hover {
+      color: $gray-scale--1;
+    }
+  }
 
-// Typography
+  li {
+    list-style: none;
+  }
 
-h1 {
-  @include typography(
-    $font-title,
-    $h1-font-size,
-    $h1-line-height,
-    $h1-font-weight
-  );
-}
+  // Title
+  h1 {
+    @include typography(
+      $font-title,
+      $h1-font-size,
+      $h1-line-height,
+      $h1-font-weight
+    );
+  }
 
-h2 {
-  @include typography(
-    $font-title,
-    $h2-font-size,
-    $h2-line-height,
-    $h2-font-weight
-  );
-}
+  h2 {
+    @include typography(
+      $font-title,
+      $h2-font-size,
+      $h2-line-height,
+      $h2-font-weight
+    );
+  }
 
-h3 {
-  @include typography(
-    $font-title,
-    $h3-font-size,
-    $h3-line-height,
-    $h3-font-weight
-  );
-}
+  h3 {
+    @include typography(
+      $font-title,
+      $h3-font-size,
+      $h3-line-height,
+      $h3-font-weight
+    );
+  }
 
-h4 {
-  @include typography(
-    $font-title,
-    $h4-font-size,
-    $h4-line-height,
-    $h4-font-weight
-  );
-}
+  h4 {
+    @include typography(
+      $font-title,
+      $h4-font-size,
+      $h4-line-height,
+      $h4-font-weight
+    );
+  }
 
-h5 {
-  @include typography(
-    $font-title,
-    $h5-font-size,
-    $h5-line-height,
-    $h5-font-weight
-  );
-}
+  h5 {
+    @include typography(
+      $font-title,
+      $h5-font-size,
+      $h5-line-height,
+      $h5-font-weight
+    );
+  }
 
-h6 {
-  @include typography(
-    $font-title,
-    $h6-font-size,
-    $h6-line-height,
-    $h6-font-weight
-  );
-}
+  h6 {
+    @include typography(
+      $font-title,
+      $h6-font-size,
+      $h6-line-height,
+      $h6-font-weight
+    );
+  }
 
-.subtitle-big {
-  @include typography(
-    $font-body,
-    $subtitle-big-font-size,
-    $subtitle-big-line-height,
-    $subtitle-big-font-weight
-  );
-}
-.subtitle-small {
-  @include typography(
-    $font-body,
-    $subtitle-small-font-size,
-    $subtitle-small-line-height,
-    $subtitle-small-font-weight
-  );
-}
-.text-paragraph-big {
-  @include typography(
-    $font-body,
-    $text-paragraph-big-font-size,
-    $text-paragraph-big-line-height,
-    $text-paragraph-big-font-weight
-  );
-}
-.text-paragraph-small {
-  @include typography(
-    $font-body,
-    $text-paragraph-small-font-size,
-    $text-paragraph-small-line-height,
-    $text-paragraph-small-font-weight
-  );
-}
-.text-placeholder {
-  @include typography(
-    $font-body,
-    $text-placeholder-font-size,
-    $text-placeholder-line-height,
-    $text-placeholder-font-weight
-  );
+  // SubTitle
+  .subtitle-big {
+    @include typography(
+      $font-body,
+      $subtitle-l-font-size,
+      $subtitle-l-line-height,
+      $subtitle-l-font-weight
+    );
+  }
+  .subtitle-medium {
+    @include typography(
+      $font-body,
+      $subtitle-m-font-size,
+      $subtitle-m-line-height,
+      $subtitle-m-font-weight
+    );
+  }
+  .subtitle-small {
+    @include typography(
+      $font-body,
+      $subtitle-s-font-size,
+      $subtitle-s-line-height,
+      $subtitle-s-font-weight
+    );
+  }
+
+  // Text
+  .text-paragraph-big {
+    @include typography(
+      $font-body,
+      $text-paragraph-l-font-size,
+      $text-paragraph-l-line-height,
+      $text-paragraph-l-font-weight
+    );
+  }
+  .text-paragraph-medium {
+    @include typography(
+      $font-body,
+      $text-paragraph-m-font-size,
+      $text-paragraph-m-line-height,
+      $text-paragraph-m-font-weight
+    );
+  }
+  .text-paragraph-small {
+    @include typography(
+      $font-body,
+      $text-paragraph-s-font-size,
+      $text-paragraph-s-line-height,
+      $text-paragraph-s-font-weight
+    );
+  }
+
+  // Placeholder
+  .text-placeholder {
+    @include typography(
+      $font-body,
+      $text-placeholder-font-size,
+      $text-placeholder-line-height,
+      $text-placeholder-font-weight
+    );
+  }
 }

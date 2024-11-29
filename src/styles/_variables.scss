@@ -161,26 +161,17 @@ $line-height-2: 1.4;
 // ====================
 // Buttons
 $btn-font-size: (
-  xs: 14px,
-  s: 18px,
-  m: 24px,
-  l: 32px,
+  S: 1.25rem,
+  M: 1.8rem,
+  L: 2.16rem,
 );
-$btn-font-weight: (
-  xs: 800,
-  s: 800,
-  m: 700,
-  l: 700,
+
+$btn-border-size: (
+  S: 0.8px solid $gray-scale--1,
+  M: 1.2px solid $gray-scale--1,
+  L: 1.6px solid $gray-scale--1,
 );
-$btn-paddings: (
-  xs: 8px 24px,
-  s: 8px 24px,
-  m: 16px 12px,
-  l: 40px 14px,
-);
-$btn-primary-paddings: (
-  xs: 30px 10px,
-  s: 36px 12px,
-  m: 48px 15px,
-  l: 60px 16px,
-);
+
+$btn-padding: 12px 24px;
+
+$btn-font-weight: 500;
