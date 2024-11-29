@@ -4,73 +4,36 @@
 
 .btn {
   background-color: $background-dark;
-  color: $gray-scale-2;
+  color: $gray-scale-1;
   display: flex;
-  gap: 0.5em;
   align-items: center;
-  justify-content: center;
+  gap: 0.5em;
+  padding: $btn-padding;
+  font-weight: $btn-font-weight;
+  border-radius: 100px;
 
-  &.active-button {
-    color: $gray-scale--1;
+  .icon {
+    display: flex;
   }
 
   &:hover {
-    color: $gray-scale--1;
-  }
+    background-color: $gray-scale--1;
+    color: $gray-scale-10;
 
-  &-xs {
-    @include button-secondary(
-      map-get($btn-paddings, xs),
-      map-get($btn-font-size, xs),
-      map-get($btn-font-weight, xs)
-    );
-  }
-  &-s {
-    @include button-secondary(
-      map-get($btn-paddings, s),
-      map-get($btn-font-size, s),
-      map-get($btn-font-weight, s)
-    );
-  }
-
-  &-m {
-    @include button-secondary(
-      map-get($btn-paddings, m),
-      map-get($btn-font-size, m),
-      map-get($btn-font-weight, m)
-    );
-  }
-
-  &-l {
-    @include button-secondary(
-      map-get($btn-paddings, l),
-      map-get($btn-font-size, l),
-      map-get($btn-font-weight, l)
-    );
-  }
-
-  .btn-icon {
-    stroke: $gray-scale-2;
-    stroke-width: 2.5;
-
-    &-xs {
-      width: 12px;
-      height: 12px;
+    path {
+      stroke: $gray-scale-10;
     }
+  }
 
-    &-s {
-      width: 14px;
-      height: 14px;
-    }
+  &-S {
+    @include btn(map-get($btn-font-size, S), map-get($btn-border-size, S));
+  }
 
-    &-m {
-      width: 18px;
-      height: 18px;
-    }
+  &-M {
+    @include btn(map-get($btn-font-size, M), map-get($btn-border-size, M));
+  }
 
-    &-l {
-      width: 22px;
-      height: 22px;
-    }
+  &-L {
+    @include btn(map-get($btn-font-size, L), map-get($btn-border-size, L));
   }
 }
