@@ -12,29 +12,29 @@
   "dependencies": {
     "@axe-core/react": "^4.10.1",
     "date-fns": "^4.1.0",
-    "dotenv": "^16.4.5",
-    "framer-motion": "^11.12.0",
+    "dotenv": "^16.4.7",
+    "framer-motion": "^11.13.1",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-lazy-load-image-component": "^1.6.2",
-    "react-router-dom": "^7.0.1",
-    "sass": "^1.81.0"
+    "react-router-dom": "^7.0.2",
+    "sass": "^1.82.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.15.0",
+    "@eslint/js": "^9.16.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react-swc": "^3.7.2",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "globals": "^15.12.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.13.0",
     "typescript": "~5.7.2",
-    "typescript-eslint": "^8.16.0",
-    "vite": "^6.0.1",
+    "typescript-eslint": "^8.17.0",
+    "vite": "^6.0.2",
     "vite-plugin-svgr": "^4.3.0"
   }
 }
