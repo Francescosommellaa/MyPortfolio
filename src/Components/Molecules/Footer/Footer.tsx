@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import "./Footer.scss";
 
@@ -8,7 +9,9 @@ import Logo from "../../Atoms/Logo/Logo";
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <Logo size="S" light={true} />
+      <Link to="/">
+        <Logo size="S" light={true} />
+      </Link>
       <div className="title">
         <h1>
           Lavoriamo <br /> Insieme
