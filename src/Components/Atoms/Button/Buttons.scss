@@ -7,10 +7,10 @@
   color: $gray-scale-1;
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.5rem;
   padding: $btn-padding;
   font-weight: $btn-font-weight;
-  border-radius: 100px;
+  border-radius: 1000px;
 
   .icon {
     display: flex;
@@ -26,14 +26,14 @@
   }
 
   &-S {
-    @include btn(map-get($btn-font-size, S), map-get($btn-border-size, S));
+    @include btn(map-get($btn-font-size, S), map-get($btn-border-weight, S));
   }
 
   &-M {
-    @include btn(map-get($btn-font-size, M), map-get($btn-border-size, M));
+    @include btn(map-get($btn-font-size, M), map-get($btn-border-weight, M));
   }
 
   &-L {
-    @include btn(map-get($btn-font-size, L), map-get($btn-border-size, L));
+    @include btn(map-get($btn-font-size, L), map-get($btn-border-weight, L));
   }
 }
