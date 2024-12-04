@@ -86,7 +86,7 @@ body {
   }
 
   // SubTitle
-  .subtitle-big {
+  .subtitle-L {
     @include typography(
       $font-body,
       $subtitle-l-font-size,
@@ -94,7 +94,7 @@ body {
       $subtitle-l-font-weight
     );
   }
-  .subtitle-medium {
+  .subtitle-M {
     @include typography(
       $font-body,
       $subtitle-m-font-size,
@@ -102,7 +102,7 @@ body {
       $subtitle-m-font-weight
     );
   }
-  .subtitle-small {
+  .subtitle-S {
     @include typography(
       $font-body,
       $subtitle-s-font-size,
@@ -112,7 +112,7 @@ body {
   }
 
   // Text
-  .text-paragraph-big {
+  .text-paragraph-L {
     @include typography(
       $font-body,
       $text-paragraph-l-font-size,
@@ -120,7 +120,7 @@ body {
       $text-paragraph-l-font-weight
     );
   }
-  .text-paragraph-medium {
+  .text-paragraph-M {
     @include typography(
       $font-body,
       $text-paragraph-m-font-size,
@@ -128,7 +128,7 @@ body {
       $text-paragraph-m-font-weight
     );
   }
-  .text-paragraph-small {
+  .text-paragraph-S {
     @include typography(
       $font-body,
       $text-paragraph-s-font-size,
