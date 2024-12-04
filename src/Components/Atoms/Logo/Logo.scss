@@ -21,4 +21,12 @@
   &-L {
     font-size: 1.5rem;
   }
+
+  &-light {
+    color: $gray-scale-8;
+
+    &:hover {
+      color: $gray-scale-10;
+    }
+  }
 }

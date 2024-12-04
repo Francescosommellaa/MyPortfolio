@@ -3,13 +3,18 @@ import "./Logo.scss";
 
 interface LogoProps {
   size: "S" | "M" | "L";
+  light?: boolean;
 }
 
-const Logo: React.FC<LogoProps> = ({ size }) => {
+const Logo: React.FC<LogoProps> = ({ size, light = false }) => {
   return (
-    <div className="logo-container">
-      <span className={`logo-text Logo-${size}`}>© Design by Fra</span>
-    </div>
+    <span
+      className={`logo-text logo-text-${
+        light ? "light" : ""
+      } logo-text-${size}`}
+    >
+      © Design by Fra
+    </span>
   );
 };
 export default Logo;

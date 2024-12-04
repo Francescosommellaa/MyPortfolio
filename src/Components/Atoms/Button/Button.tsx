@@ -5,9 +5,15 @@ interface ButtonProps {
   size: "S" | "M" | "L";
   text: string;
   withIcon?: boolean;
+  light?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ size, text, withIcon = true }) => {
+const Button: React.FC<ButtonProps> = ({
+  size,
+  text,
+  light = false,
+  withIcon = true,
+}) => {
   const svgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,7 +35,7 @@ const Button: React.FC<ButtonProps> = ({ size, text, withIcon = true }) => {
     }
   }, [size, withIcon]);
   return (
-    <button className={`btn btn-${size}`}>
+    <button className={`btn btn-${size} ${light ? "light" : ""}`}>
       {text}
       {withIcon && size && (
         <div className="icon" ref={svgRef} aria-hidden="true" />
