@@ -3,16 +3,16 @@ import "./Footer.scss";
 
 // atoms
 import Button from "../../Atoms/Button/Button";
-import Hr from "../../Atoms/HorizontalRule/Hr";
+import Logo from "../../Atoms/Logo/Logo";
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <div className="top-footer">
+      <Logo size="S" light={true} />
+      <div className="title">
         <h1>
           Lavoriamo <br /> Insieme
         </h1>
-        <Button text="Parliamo" size={"L"} />
       </div>
       <div className="contact-container">
         <a
@@ -24,6 +24,7 @@ const Footer: React.FC = () => {
             text="Info@francescosommella.design"
             size={"M"}
             withIcon={false}
+            light={true}
           />
         </a>
         <a
@@ -31,18 +32,17 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button text="3773711446" size={"M"} withIcon={false} />
+          <Button text="3773711446" size={"M"} withIcon={false} light={true} />
         </a>
       </div>
 
       <div className="info-container">
+        {/* social */}
         <div>
-          <span>© Francesco Sommella</span>
-        </div>
-        <div className="bottomleft-footer">
           <span className="text-placeholder">Social</span>
           <div className="social-container">
             <a
+              className="text-paragraph-small"
               href="https://www.awwwards.com/sites/lifeworld-by-olafur-eliasson"
               target="_blank"
               rel="noopener noreferrer"
@@ -50,6 +50,7 @@ const Footer: React.FC = () => {
               Awwwards
             </a>
             <a
+              className="text-paragraph-small"
               href="https://www.linkedin.com/in/francescosommellaa/"
               target="_blank"
               rel="noopener noreferrer"
@@ -57,6 +58,7 @@ const Footer: React.FC = () => {
               Linkedin
             </a>
             <a
+              className="text-paragraph-small"
               href="https://www.instagram.com/designby.fra/"
               target="_blank"
               rel="noopener noreferrer"
@@ -64,6 +66,7 @@ const Footer: React.FC = () => {
               Instagram
             </a>
             <a
+              className="text-paragraph-small"
               href="https://twitter.com/Designby_fra"
               target="_blank"
               rel="noopener noreferrer"
@@ -71,6 +74,7 @@ const Footer: React.FC = () => {
               X(Twitter)
             </a>
             <a
+              className="text-paragraph-small"
               href="https://www.behance.net/designby_fra"
               target="_blank"
               rel="noopener noreferrer"
@@ -79,6 +83,11 @@ const Footer: React.FC = () => {
             </a>
           </div>
         </div>
+        {/* info */}
+        <span className="text-placeholder">
+          Ideato, <br /> progettato e <br />
+          Sviluppato da me
+        </span>
       </div>
     </footer>
   );
