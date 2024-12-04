@@ -2,7 +2,28 @@
 @use "../../../styles/variables" as *;
 @use "../../../styles/mixins" as *;
 
-h2 {
-  color: $brand-primary-8-5;
-  @include uppercase;
+.hero-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $gray-scale-4;
+  padding: 0 120px;
+
+  h1 {
+    color: $gray-scale--1;
+  }
+
+  .hero-content {
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+    margin-top: 32px;
+    gap: 24px;
+
+    .text-paragraph-L {
+      width: 60%;
+    }
+  }
 }
