@@ -3,7 +3,8 @@ import "./Buttons.scss";
 
 interface ButtonProps {
   size: "S" | "M" | "L";
-  text: string;
+  iconName?: string;
+  text?: string;
   withIcon?: boolean;
   light?: boolean;
 }
@@ -11,15 +12,16 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   size,
   text,
+  iconName,
   light = false,
   withIcon = true,
 }) => {
   const svgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (withIcon && size) {
+    if (withIcon && size && iconName) {
       // Percorso dinamico in base alla dimensione
-      const svgPath = `src/assets/Icon/Icon/Name=Arrow-min-right, Dimension=${size}.svg`;
+      const svgPath = `src/assets/Icon & Tools/Icon/Name=${iconName}, Dimension=${size}.svg`;
 
       // Carica il file SVG e inseriscilo nel DOM
       fetch(svgPath)
@@ -33,11 +35,11 @@ const Button: React.FC<ButtonProps> = ({
           console.error(`Errore nel caricamento dell'SVG: ${error}`)
         );
     }
-  }, [size, withIcon]);
+  }, [size, withIcon, iconName]);
   return (
     <button className={`btn btn-${size} ${light ? "light" : ""}`}>
       {text}
-      {withIcon && size && (
+      {withIcon && size && iconName && (
         <div className="icon" ref={svgRef} aria-hidden="true" />
       )}
     </button>
