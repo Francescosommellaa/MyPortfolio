@@ -9,13 +9,13 @@
   width: 100%;
 
   &-L {
-    gap: 409px;
+    gap: 25.57rem;
   }
   &-M {
-    gap: 349px;
+    gap: 21.82rem;
   }
   &-S {
-    gap: 335px;
+    gap: 20.94rem;
   }
 
   .project-card:nth-child(even) {
@@ -25,19 +25,19 @@
   .project-card {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: $gap-1;
 
     &-L {
-      width: 453px;
-      height: 329px;
+      width: 28.32rem;
+      height: 20.56rem;
     }
     &-M {
-      width: 325px;
-      height: 200px;
+      width: 20.31rem;
+      height: 12.5rem;
     }
     &-S {
-      width: 255px;
-      height: 160px;
+      width: 15.94rem;
+      height: 10rem;
     }
 
     .img-container {
@@ -91,8 +91,4 @@
       }
     }
   }
-}
-
-.right {
-  margin-top: 369px;
 }

@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   color: $gray-scale-4;
-  padding: 0 120px;
+  padding: $padding-L;
   background-color: $gray-scale-10;
 
   h1 {
@@ -20,8 +20,8 @@
     display: flex;
     justify-content: end;
     align-items: baseline;
-    margin-top: 32px;
-    gap: 24px;
+    margin-top: 2rem;
+    gap: $gap-5;
 
     .text-paragraph-L {
       width: 60%;

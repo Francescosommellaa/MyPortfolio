@@ -8,8 +8,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
-  padding: 0 120px;
+  padding: $padding-L;
+  z-index: 1000;
 
   background-color: #0d0d0d31;
   backdrop-filter: blur(24px);
@@ -19,7 +19,7 @@
 
   .nav-links {
     display: flex;
-    gap: 1rem;
+    gap: $gap-3;
     margin: 0;
     padding: 0;
 

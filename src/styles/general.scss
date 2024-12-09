@@ -115,25 +115,25 @@ body {
   .text-paragraph-L {
     @include typography(
       $font-body,
-      $text-paragraph-l-font-size,
-      $text-paragraph-l-line-height,
-      $text-paragraph-l-font-weight
+      $paragraph-l-font-size,
+      $paragraph-l-line-height,
+      $paragraph-l-font-weight
     );
   }
   .text-paragraph-M {
     @include typography(
       $font-body,
-      $text-paragraph-m-font-size,
-      $text-paragraph-m-line-height,
-      $text-paragraph-m-font-weight
+      $paragraph-m-font-size,
+      $paragraph-m-line-height,
+      $paragraph-m-font-weight
     );
   }
   .text-paragraph-S {
     @include typography(
       $font-body,
-      $text-paragraph-s-font-size,
-      $text-paragraph-s-line-height,
-      $text-paragraph-s-font-weight
+      $paragraph-s-font-size,
+      $paragraph-s-line-height,
+      $paragraph-s-font-weight
     );
   }
 
@@ -141,9 +141,9 @@ body {
   .text-placeholder {
     @include typography(
       $font-body,
-      $text-placeholder-font-size,
-      $text-placeholder-line-height,
-      $text-placeholder-font-weight
+      $placeholder-font-size,
+      $placeholder-line-height,
+      $placeholder-font-weight
     );
   }
 }

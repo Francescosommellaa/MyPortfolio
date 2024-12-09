@@ -14,7 +14,7 @@ interface WorkCardsProps {
 
 const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
   return (
-    <div className={`container-cards container-cards-${size} right`}>
+    <div className={`container-cards container-cards-${size}`}>
       {Projects.map((project) => (
         <div key={project.slug} className={`project-card project-card-${size}`}>
           <h6 className="project-title">{project.Title}</h6>

@@ -7,10 +7,10 @@
   color: $gray-scale-1;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: $gap-1;
   padding: $btn-padding;
   font-weight: $btn-font-weight;
-  border-radius: 1000px;
+  border-radius: $border-radius-circle;
 
   .icon {
     display: flex;

@@ -3,7 +3,7 @@
 @use "../../../styles/mixins" as *;
 
 .footer {
-  padding: 24px 120px;
+  padding: $padding-L;
   text-align: left;
   background-color: $background-light;
 
@@ -20,7 +20,7 @@
 
   .contact-container {
     display: flex;
-    gap: 24px;
+    gap: $gap-5;
     margin-bottom: 120px;
   }
 

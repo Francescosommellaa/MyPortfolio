@@ -116,26 +116,25 @@ $shadow-card-s: 0px 16px 24px rgba(0, 0, 0, 0.18),
   0px 6px 12px rgba(0, 0, 0, 0.14);
 
 // ====================
-// Corner Radius
+// border Radius
 
-$corner-radius-0: 0px;
-$corner-radius-1: 8px;
-$corner-radius-2: 12px;
-$corner-radius-3: 16px;
-$corner-radius-4: 20px;
-$corner-radius-5: 24px;
-$corner-radius-6: 32px;
+$border-radius-1: 0.5rem;
+$border-radius-2: 0.75rem;
+$border-radius-3: 1rem;
+$border-radius-4: 1.25rem;
+$border-radius-5: 1.5rem;
+$border-radius-6: 2rem;
+$border-radius-circle: 60rem;
 
 // ====================
 // Gap
 
-$gap-0: 0px;
-$gap-1: 8px;
-$gap-2: 12px;
-$gap-3: 16px;
-$gap-4: 20px;
-$gap-5: 24px;
-$gap-6: 32px;
+$gap-1: 0.5rem;
+$gap-2: 0.75rem;
+$gap-3: 1rem;
+$gap-4: 1.25rem;
+$gap-5: 1.5rem;
+$gap-6: 2rem;
 
 // ====================
 // Opacity
@@ -145,18 +144,17 @@ $opacity-50: 0.5;
 $opacity-25: 0.25;
 
 // ====================
-// Stroke Width
-
-$stroke-s: 1px;
-$stroke-m: 2px;
-$stroke-l: 4px;
-
-// ====================
 // Line Height
 
 $line-height: 1;
 $line-height-1: 1.2;
 $line-height-2: 1.4;
+
+// ====================
+// Padding
+
+$padding-M: 0.5rem 1.5rem;
+$padding-L: 1.5rem 5rem;
 
 // ====================
 // Buttons
@@ -167,11 +165,11 @@ $btn-font-size: (
 );
 
 $btn-border-weight: (
-  S: 0.91px solid $gray-scale--1,
-  M: 1.31px solid $gray-scale--1,
-  L: 1.83px solid $gray-scale--1,
+  S: 0.057rem solid $gray-scale--1,
+  M: 0.082rem solid $gray-scale--1,
+  L: 0.114rem solid $gray-scale--1,
 );
 
-$btn-padding: 12px 24px;
+$btn-padding: 0.75rem 1.5rem;
 
 $btn-font-weight: 500;
