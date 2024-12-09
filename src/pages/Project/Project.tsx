@@ -1,6 +1,8 @@
 import React from "react";
-import "./Project.scss";
 import { useParams } from "react-router-dom";
+
+// SCSS
+import "./Project.scss";
 
 const Project: React.FC = () => {
   const { slug } = useParams();

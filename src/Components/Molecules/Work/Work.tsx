@@ -1,4 +1,6 @@
 import React from "react";
+
+// SCSS
 import "./Work.scss";
 
 // Atoms

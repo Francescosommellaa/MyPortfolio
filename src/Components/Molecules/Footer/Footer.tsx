@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
+
+// SCSS
 import "./Footer.scss";
 
 // atoms

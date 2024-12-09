@@ -1,7 +1,9 @@
 import React from "react";
-import Projects from "../../DB/Projects";
-import "./WorkCards.scss";
 import { Link } from "react-router-dom";
+import Projects from "../../DB/Projects";
+
+// SCSS
+import "./WorkCards.scss";
 
 // Atoms
 import Button from "../Button/Button";

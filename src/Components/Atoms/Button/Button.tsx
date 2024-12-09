@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+
+// SCSS
 import "./Buttons.scss";
 
 interface ButtonProps {
@@ -20,10 +22,8 @@ const Button: React.FC<ButtonProps> = ({
 
   useEffect(() => {
     if (withIcon && size && iconName) {
-      // Percorso dinamico in base alla dimensione
       const svgPath = `src/assets/Icon & Tools/Icon/Name=${iconName}, Dimension=${size}.svg`;
 
-      // Carica il file SVG e inseriscilo nel DOM
       fetch(svgPath)
         .then((response) => response.text())
         .then((svgContent) => {

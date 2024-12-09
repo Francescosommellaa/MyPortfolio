@@ -1,8 +1,9 @@
 import React from "react";
-import "./Navbar.scss";
-
 import { Link, useLocation } from "react-router-dom";
 import NavLink from "../../DB/NavLink";
+
+// SCSS
+import "./Navbar.scss";
 
 // Atoms
 import Logo from "../../Atoms/Logo/Logo";

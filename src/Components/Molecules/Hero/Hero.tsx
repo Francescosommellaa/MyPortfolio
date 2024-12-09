@@ -1,4 +1,6 @@
 import React from "react";
+
+// SCSS
 import "./Hero.scss";
 
 const Hero: React.FC = () => {
