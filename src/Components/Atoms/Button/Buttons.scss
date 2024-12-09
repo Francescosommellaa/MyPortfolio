@@ -3,7 +3,7 @@
 @use "../../../styles/mixins" as *;
 
 .btn {
-  background-color: $background-dark;
+  background: none;
   color: $gray-scale-1;
   display: flex;
   align-items: center;
