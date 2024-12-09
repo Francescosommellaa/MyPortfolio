@@ -6,19 +6,39 @@
   color: $gray-scale-2;
   display: flex;
   flex-direction: column;
-  gap: 409px;
   width: 100%;
 
+  &-L {
+    gap: 409px;
+  }
+  &-M {
+    gap: 349px;
+  }
+  &-S {
+    gap: 335px;
+  }
+
   .project-card:nth-child(even) {
-    align-self: flex-end; /* Allinea a destra i progetti pari */
+    align-self: flex-end;
   }
 
   .project-card {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 453px;
-    height: 329px;
+
+    &-L {
+      width: 453px;
+      height: 329px;
+    }
+    &-M {
+      width: 325px;
+      height: 200px;
+    }
+    &-S {
+      width: 255px;
+      height: 160px;
+    }
 
     .img-container {
       img {

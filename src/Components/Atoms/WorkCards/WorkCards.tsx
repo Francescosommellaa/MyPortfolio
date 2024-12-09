@@ -8,17 +8,21 @@ import "./WorkCards.scss";
 // Atoms
 import Button from "../Button/Button";
 
-const WorkCards: React.FC = () => {
+interface WorkCardsProps {
+  size: "S" | "M" | "L";
+}
+
+const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
   return (
-    <div className="container-cards right">
+    <div className={`container-cards container-cards-${size} right`}>
       {Projects.map((project) => (
-        <div key={project.slug} className="project-card">
+        <div key={project.slug} className={`project-card project-card-${size}`}>
           <h6 className="project-title">{project.Title}</h6>
           <div className="img-container">
             <img
               src={
                 new URL(
-                  `/src/assets/Project-img/Project-Cover/${project.ProjectCover}`,
+                  `/src/assets/Project-img/Project-Cover/Name=${project.ProjectCover}, Dimension=${size}.jpg`,
                   import.meta.url
                 ).href
               }
