@@ -7,11 +7,9 @@ import "./Project.scss";
 const Project: React.FC = () => {
   const { slug } = useParams();
   return (
-    <>
-      <div>
-        <h1>Dettagli del Progetto {slug}</h1>
-      </div>
-    </>
+    <main>
+      <h1>Dettagli del Progetto {slug}</h1>
+    </main>
   );
 };
 

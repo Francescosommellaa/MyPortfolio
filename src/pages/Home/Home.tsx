@@ -9,10 +9,10 @@ import Work from "../../Components/Molecules/Work/Work";
 
 const Home: React.FC = () => {
   return (
-    <>
+    <main>
       <Hero />
       <Work />
-    </>
+    </main>
   );
 };
 

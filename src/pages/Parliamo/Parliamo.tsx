@@ -3,9 +3,9 @@ import "./Parliamo.scss";
 
 const Parliamo: React.FC = () => {
   return (
-    <div className="parliamo">
+    <main className="parliamo">
       <h1>Parliamo Page</h1>
-    </div>
+    </main>
   );
 };
 

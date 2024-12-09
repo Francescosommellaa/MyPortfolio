@@ -3,9 +3,9 @@ import "./About.scss";
 
 const About: React.FC = () => {
   return (
-    <div className="about">
+    <main className="about">
       <h1>About Page</h1>
-    </div>
+    </main>
   );
 };
 

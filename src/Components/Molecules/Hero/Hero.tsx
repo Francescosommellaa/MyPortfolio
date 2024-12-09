@@ -5,7 +5,7 @@ import "./Hero.scss";
 
 const Hero: React.FC = () => {
   return (
-    <div className="hero-container">
+    <header className="hero-container">
       <h1>Human ≠ Robot </h1>
       <div className="hero-content">
         <svg
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           funzionali.
         </p>
       </div>
-    </div>
+    </header>
   );
 };
 
