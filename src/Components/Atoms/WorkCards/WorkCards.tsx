@@ -23,7 +23,7 @@ const WorkCards: React.FC = () => {
               alt={`${project.Title} cover`}
               className="project-cover"
             />
-            <Link to="/Project">
+            <Link to={`/project/${project.slug}`}>
               <Button
                 size="S"
                 text="Vedi Progetto"

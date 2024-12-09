@@ -9,6 +9,7 @@ import Footer from "./Components/Molecules/Footer/Footer";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Parliamo from "./pages/Parliamo/Parliamo";
+import Project from "./pages/Project/Project";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/parliamo" element={<Parliamo />} />
+          <Route path="/project/:slug" element={<Project />} />
         </Routes>
         <Footer />
       </Router>
