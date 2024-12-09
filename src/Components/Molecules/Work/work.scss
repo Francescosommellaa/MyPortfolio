@@ -1,4 +1,20 @@
 @use "../../../styles/general" as *;
 @use "../../../styles/variables" as *;
 @use "../../../styles/mixins" as *;
-@use "../../../styles/typography" as *;
+
+.work-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 180px 80px;
+  position: relative;
+
+  .section-title {
+    font-size: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+    color: $gray-scale-8-5;
+  }
+}
