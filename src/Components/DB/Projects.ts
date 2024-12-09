@@ -20,7 +20,7 @@ const Projects: {
             Services: "Front-end Developer",
             Description:
                 "Un'applicazione Vue.js ispirata a WhatsApp per inviare messaggi.",
-            ProjectCover: "VueBoolzapp.jpg",
+            ProjectCover: "VueBoolzapp",
             ProjectImg: "",
         },
         {
@@ -33,7 +33,7 @@ const Projects: {
             Services: "UX/UI Design",
             Description:
                 "Una webapp per lo streaming di videogiochi.",
-            ProjectCover: "VueBoolzapp.jpg",
+            ProjectCover: "VueBoolzapp",
             ProjectImg: "",
         },
         {
@@ -46,7 +46,7 @@ const Projects: {
             Services: "Front-end Developer",
             Description:
                 "Porta l'iconica sfida della Morra Cinese a un livello completamente nuovo! Con un'estetica audace e futuristica ispirata allo stile energico di Rocket League.",
-            ProjectCover: "MorraCinese.jpg",
+            ProjectCover: "MorraCinese",
             ProjectImg: "",
         },
         {
@@ -59,7 +59,7 @@ const Projects: {
             Services: "Front-end Developer",
             Description:
                 "Un'app di gestione delle attività sviluppata con Vue.js per organizzare e monitorare le attività quotidiane.",
-            ProjectCover: "VueTodolist.jpg",
+            ProjectCover: "VueTodolist",
             ProjectImg: "",
         },
     ];

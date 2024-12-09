@@ -5,13 +5,14 @@ import "./Work.scss";
 
 // Atoms
 import WorkCards from "../../Atoms/WorkCards/WorkCards";
+import SectionTitle from "../../Atoms/SectionTitle/SectionTitle";
 
 const Work: React.FC = () => {
   return (
     <section className="work-container">
       {/* work cards */}
-      <h1 className="section-title">Lavori</h1>
-      <WorkCards />
+      <SectionTitle size="L" text="Lavori" />
+      <WorkCards size="L" />
     </section>
   );
 };
