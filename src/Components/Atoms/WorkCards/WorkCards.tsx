@@ -16,25 +16,27 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
   return (
     <div className={`container-cards container-cards-${size}`}>
       {Projects.map((project) => (
-        <div key={project.slug} className={`project-card project-card-${size}`}>
+        <div key={project.slug} className="project-card">
           <h6 className="project-title">{project.Title}</h6>
           <div className="img-container">
-            <img
-              src={
-                new URL(
-                  `/src/assets/Project-img/Project-Cover/Name=${project.ProjectCover}, Dimension=${size}.jpg`,
-                  import.meta.url
-                ).href
-              }
-              alt={`${project.Title} cover`}
-              className="project-cover"
-            />
             <Link to={`/project/${project.slug}`}>
-              <Button
-                size="S"
-                text="Vedi Progetto"
-                iconName="Arrow-min-right"
+              <img
+                src={
+                  new URL(
+                    `/src/assets/Project-img/Project-Cover/Name=${project.ProjectCover}.jpg`,
+                    import.meta.url
+                  ).href
+                }
+                alt={`${project.Title} cover`}
+                className="project-cover"
               />
+              <Link to={`/project/${project.slug}`}>
+                <Button
+                  size="S"
+                  text="Vedi Progetto"
+                  iconName="Arrow-min-right"
+                />
+              </Link>
             </Link>
           </div>
           <div className="description">
