@@ -1,6 +1,7 @@
 import React from "react";
 import Projects from "../../DB/Projects";
 import "./WorkCards.scss";
+import { Link } from "react-router-dom";
 
 // Atoms
 import Button from "../Button/Button";
@@ -22,7 +23,13 @@ const WorkCards: React.FC = () => {
               alt={`${project.Title} cover`}
               className="project-cover"
             />
-            <Button size="S" text="Vedi Progetto" iconName="Arrow-min-right" />
+            <Link to="/Project">
+              <Button
+                size="S"
+                text="Vedi Progetto"
+                iconName="Arrow-min-right"
+              />
+            </Link>
           </div>
           <div className="description">
             <span className="text-placeholder">{project.Services}</span>
