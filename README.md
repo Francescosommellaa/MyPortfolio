@@ -19,40 +19,79 @@ Questo repository contiene il codice sorgente del mio portfolio personale. È st
 
 ---
 
-## Struttura del Progetto
+## 📂 Struttura del Progetto
 
-Configurazione del Progetto
+### Configurazione del Progetto
+
 Prerequisiti
 Node.js: Versione >= 16
 npm: Versione >= 8
-Installazione
-Clona il repository:
-bash
-Copia codice
+
+### Clona il repository:
+
+```plaintext
+
 git clone https://github.com/francescosommella/portfolio.git
 cd portfolio
-Installa le dipendenze:
-bash
-Copia codice
+
+```
+
+### Installa le dipendenze:
+
+```plaintext
+
 npm install
-Script Disponibili
-npm run dev: Avvia il server di sviluppo.
-npm run build: Compila il progetto per la produzione.
-npm run preview: Esegue una preview della build.
-npm run lint: Analizza il codice per trovare problemi.
+
+```
 
 ---
 
+## 📄 Struttura dei File
+
 ```plaintext
+
 src/
 ├── assets/             # File statici come immagini
-├── components/         # Componenti riutilizzabili (Navbar, Footer, ecc.)
-│   ├── Navbar/
-│   │   ├── Navbar.tsx
-│   │   ├── Navbar.scss
-│   ├── Footer/
-│   │   ├── Footer.tsx
-│   │   ├── Footer.scss
+│   ├── Icon-Tools/     # Icone e immagini relative agli strumenti
+│   │   ├── Icon/
+│   │   ├── Tools/
+│   ├── Me/             # Immagini personali
+│   ├── Project-img/    # Immagini relative ai progetti
+│       ├── Project-Cover/  # Copertine dei progetti
+├── components/         # Componenti riutilizzabili
+│   ├── Atoms/          # Componenti elementari
+│   │   ├── Button/
+│   │   │   ├── Button.tsx
+│   │   │   ├── Buttons.scss
+│   │   ├── Logo/
+│   │   │   ├── Logo.tsx
+│   │   │   ├── Logo.scss
+│   │   ├── SectionTitle/
+│   │   │   ├── SectionTitle.tsx
+│   │   │   ├── SectionTitle.scss
+│   │   ├── WorkCards/
+│   │       ├── WorkCards.tsx
+│   │       ├── WorkCards.scss
+│   ├── Molecules/      # Componenti composti
+│   │   ├── Footer/
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Footer.scss
+│   │   ├── Hero/
+│   │   │   ├── Hero.tsx
+│   │   │   ├── Hero.scss
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── Navbar.scss
+│   │   ├── Tools/
+│   │   │   ├── Tools.tsx
+│   │   │   ├── Tools.scss
+│   │   ├── Work/
+│   │       ├── Work.tsx
+│   │       ├── work.scss
+│   ├── DB/             # Dati statici
+│       ├── NavLink.ts
+│       ├── Projects.ts
+│       ├── ToolsImg.ts
 ├── pages/              # File relativi alle pagine principali
 │   ├── Home/
 │   │   ├── Home.tsx
@@ -61,16 +100,19 @@ src/
 │   │   ├── About.tsx
 │   │   ├── About.scss
 │   ├── Parliamo/
-│   │    ├── Parliamo.tsx
-│   │    ├── Parliamo.scss
+│   │   ├── Parliamo.tsx
+│   │   ├── Parliamo.scss
+│   ├── Project/
+│       ├── Project.tsx
+│       ├── Project.scss
 ├── styles/             # Stili globali e variabili
-│   ├── _variables.scss
-│   ├── _mixins.scss
-│   ├── _ui-kit.scss
-│   ├── general.scss
+│   ├── _variables.scss # Variabili globali SCSS
+│   ├── _mixins.scss    # Mixin SCSS riutilizzabili
+│   ├── _typography.scss # Gestione tipografica
+│   ├── general.scss    # Stili globali
 ├── App.tsx             # Punto di ingresso principale dell'app
 ├── main.tsx            # Monta l'app su ReactDOM
-├── globals.d.ts        # Tipizzazioni per file SCSS
+├── vite-env.d.ts       # Tipizzazioni per file SCSS
 
 ```
 
@@ -87,12 +129,11 @@ Animazioni: Animazioni fluide con Framer Motion.
 
 ## Come Contribuire
 
-### Se vuoi contribuire:
-
 Fai un fork del repository.
 Crea un branch per la tua funzionalità:
 
 ```plaintext
+
 git checkout -b feature/nome-funzionalità
 
 ```
@@ -100,6 +141,7 @@ git checkout -b feature/nome-funzionalità
 Fai un commit delle modifiche:
 
 ```plaintext
+
 git commit -m "Aggiunta funzionalità: nome-funzionalità"
 
 ```
@@ -107,6 +149,7 @@ git commit -m "Aggiunta funzionalità: nome-funzionalità"
 Esegui un push al tuo branch:
 
 ```plaintext
+
 git push origin feature/nome-funzionalità
 
 ```
@@ -121,10 +164,10 @@ Email: info@francescosommella.design
 
 Portfolio Live: https://francescosommella.design
 
-LinkedIn: https://www.linkedin.com/in/francescosommellaa
+Linkedin: https://www.linkedin.com/in/francescosommellaa
 
 GitHub: https://www.github.com/francescosommellaa
 
 Instagram: https://www.instagram.com/designby.fra
 
-behance: https://www.behance.net/designby_fra
+Behance: https://www.behance.net/designby_fra
