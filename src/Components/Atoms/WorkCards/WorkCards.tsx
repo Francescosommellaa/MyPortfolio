@@ -23,7 +23,7 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
               <img
                 src={
                   new URL(
-                    `/src/assets/Project-img/Project-Cover/Name=${project.ProjectCover}.jpg`,
+                    `/src/Assets/Project-img/Project-Cover/Name=${project.ProjectCover}.jpg`,
                     import.meta.url
                   ).href
                 }

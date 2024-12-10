@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
 
   useEffect(() => {
     if (withIcon && size && iconName) {
-      const svgPath = `src/assets/Icon & Tools/Icon/Name=${iconName}, Dimension=${size}.svg`;
+      const svgPath = `src/Assets/Icon-Tools/Icon/Name=${iconName}, Dimension=${size}.svg`;
 
       fetch(svgPath)
         .then((response) => response.text())

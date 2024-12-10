@@ -19,14 +19,14 @@ const Navbar: React.FC = () => {
 
       <ul className="nav-links">
         {NavLink.map((link) => (
-          <li key={link.name}>
+          <li key={link.Name}>
             <Link
-              to={link.url}
+              to={link.Url}
               className={`nav-link ${
-                location.pathname === link.url ? "active" : ""
+                location.pathname === link.Url ? "active" : ""
               }`}
             >
-              <span>{link.name}</span>
+              <span>{link.Name}</span>
             </Link>
           </li>
         ))}
