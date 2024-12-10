@@ -24,7 +24,7 @@ Questo repository contiene il codice sorgente del mio portfolio personale. È st
 ### Configurazione del Progetto
 
 Prerequisiti
-Node.js: Versione >= 16
+Node.js: Versione >= 16,
 npm: Versione >= 8
 
 ### Clona il repository:
