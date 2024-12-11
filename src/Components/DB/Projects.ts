@@ -2,60 +2,77 @@ const Projects: {
     slug: string;
     title: string;
     url: string;
-    date: string;
+    year: string;
     creatorName: string;
     services: string;
     description: string;
+    descriptionTwo: string;
     projectCover: string;
-    projectImg: string;
+    projectImg: string[];
 }[] = [
         {
             slug: "boolzapp",
             title: "Boolzapp",
             url: "https://github.com/Francescosommellaa/vue-boolzapp",
-            date: "07/2024",
+            year: "© 2024",
             creatorName: "Francesco Sommella",
             services: "Front-end Developer",
-            description:
-                "Un'applicazione Vue.js ispirata a WhatsApp per inviare messaggi.",
+            description: "Un'applicazione Vue.js ispirata a WhatsApp per inviare messaggi.",
+            descriptionTwo: "Un'applicazione Vue.js ispirata a WhatsApp per inviare messaggi.",
             projectCover: "VueBoolzapp",
-            projectImg: "",
+            projectImg: [
+                "Home",
+                "Contact",
+                "Messages",
+            ],
         },
         {
             slug: "element-gaming",
             title: "Element Gaming",
             url: "https://element-gaming.eu/",
-            date: "07/2023",
+            year: "© 2023",
             creatorName: "Francesco Sommella",
             services: "UX/UI Design",
-            description:
-                "Una webapp per lo streaming di videogiochi.",
+            description: "Una webapp per lo streaming di videogiochi.",
+            descriptionTwo: "Un'applicazione Vue.js ispirata a WhatsApp per inviare messaggi.",
             projectCover: "VueBoolzapp",
-            projectImg: "",
+            projectImg: [
+                "Home",
+                "Contact",
+                "Messages",
+            ],
         },
         {
             slug: "morra-cinese",
             title: "Morra Cinese",
             url: "https://github.com/Francescosommellaa/MorraCinese",
-            date: "10/2024",
+            year: "© 2024",
             creatorName: "Francesco Sommella",
             services: "Front-end Developer",
-            description:
-                "Porta l'iconica sfida della Morra Cinese a un livello completamente nuovo! Con un'estetica audace e futuristica ispirata allo stile energico di Rocket League.",
+            description: "Porta l'iconica sfida della Morra Cinese a un livello completamente nuovo! Con un'estetica audace e futuristica ispirata allo stile energico di Rocket League.",
+            descriptionTwo: "Un'applicazione Vue.js ispirata a WhatsApp per inviare messaggi.",
             projectCover: "MorraCinese",
-            projectImg: "",
+            projectImg: [
+                "Home",
+                "Contact",
+                "Messages",
+            ],
         },
         {
             slug: "todo-list",
             title: "Todo List",
             url: "https://github.com/Francescosommellaa/vue-todolist",
-            date: "06/2024",
+            year: "© 2024",
             creatorName: "Francesco Sommella",
             services: "Front-end Developer",
-            description:
-                "Un'app di gestione delle attività sviluppata con Vue.js per organizzare e monitorare le attività quotidiane.",
+            description: "Un'app di gestione delle attività sviluppata con Vue.js per organizzare e monitorare le attività quotidiane.",
+            descriptionTwo: "Un'applicazione Vue.js ispirata a WhatsApp per inviare messaggi.",
             projectCover: "VueTodolist",
-            projectImg: "",
+            projectImg: [
+                "Home",
+                "Contact",
+                "Messages",
+            ],
         },
     ];
 

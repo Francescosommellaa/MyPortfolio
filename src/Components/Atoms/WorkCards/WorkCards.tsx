@@ -43,7 +43,7 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
           </div>
           <div className="description">
             <span className="text-placeholder">{project.services}</span>
-            <span className="text-placeholder">{project.date}</span>
+            <span className="text-placeholder">{project.year}</span>
           </div>
         </div>
       ))}

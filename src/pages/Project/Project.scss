@@ -1,3 +1,64 @@
 @use "../../styles/general" as *;
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
+
+.project-container {
+  color: $gray-scale--1;
+  height: 100vh;
+  padding: $padding-L;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: $gap-8;
+
+  .img-container {
+    display: flex;
+    gap: $gap-4;
+  }
+
+  .main-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $gap-5;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-8;
+
+    .secondary-info {
+      display: flex;
+      flex-direction: column;
+      color: $gray-scale-4;
+      gap: $gap-8;
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        color: $gray-scale-6;
+        flex-wrap: wrap;
+        gap: $gap-4;
+
+        .text-placeholder {
+          color: $gray-scale--1;
+          display: block;
+        }
+      }
+
+      .description-container {
+        display: flex;
+        justify-content: space-between;
+
+        hr {
+          height: 80%;
+          margin: auto $gap-6;
+          border: 1px solid $gray-scale-8-5;
+          border-radius: $border-radius-circle;
+        }
+      }
+    }
+  }
+}
