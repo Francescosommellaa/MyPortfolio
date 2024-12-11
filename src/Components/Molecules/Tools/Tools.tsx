@@ -17,11 +17,11 @@ const Tools: React.FC<Toolsprops> = ({ size }) => {
         <img
           src={
             new URL(
-              `/src/Assets/Icon-Tools/Tools/Name=${tools.Url}, Dimension=${size}.png`,
+              `/src/Assets/Icon-Tools/Tools/Name=${tools.url}, Dimension=${size}.png`,
               import.meta.url
             ).href
           }
-          alt={`${tools.Url}`}
+          alt={`${tools.url}`}
           key={tools.id}
         />
       ))}

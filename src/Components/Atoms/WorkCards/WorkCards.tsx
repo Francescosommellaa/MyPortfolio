@@ -19,17 +19,17 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
     <div className={`container-cards container-cards-${size}`}>
       {Projects.map((project) => (
         <div key={project.slug} className="project-card">
-          <h6 className="project-title">{project.Title}</h6>
+          <h6 className="project-title">{project.title}</h6>
           <div className="img-container">
             <Link to={`/project/${project.slug}`}>
               <img
                 src={
                   new URL(
-                    `/src/Assets/Project-img/Project-Cover/Name=${project.ProjectCover}.jpg`,
+                    `/src/Assets/Project-img/Project-Cover/Name=${project.projectCover}.jpg`,
                     import.meta.url
                   ).href
                 }
-                alt={`${project.Title} cover`}
+                alt={`${project.title} cover`}
                 className="project-cover"
               />
               <Link to={`/project/${project.slug}`}>
@@ -42,8 +42,8 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
             </Link>
           </div>
           <div className="description">
-            <span className="text-placeholder">{project.Services}</span>
-            <span className="text-placeholder">{project.Date}</span>
+            <span className="text-placeholder">{project.services}</span>
+            <span className="text-placeholder">{project.date}</span>
           </div>
         </div>
       ))}

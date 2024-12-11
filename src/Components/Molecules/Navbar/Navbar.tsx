@@ -21,14 +21,14 @@ const Navbar: React.FC = () => {
 
       <ul className="nav-links">
         {NavLink.map((link) => (
-          <li key={link.Name}>
+          <li key={link.name}>
             <Link
-              to={link.Url}
+              to={link.url}
               className={`nav-link ${
-                location.pathname === link.Url ? "active" : ""
+                location.pathname === link.url ? "active" : ""
               }`}
             >
-              <span>{link.Name}</span>
+              <span>{link.name}</span>
             </Link>
           </li>
         ))}

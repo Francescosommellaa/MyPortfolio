@@ -1,44 +1,44 @@
-const ToolsImg: { Url: string; id: number }[] = [
+const ToolsImg: { url: string; id: number }[] = [
     {
         id: 1,
-        Url: "Figma",
+        url: "Figma",
     },
     {
         id: 2,
-        Url: "Adobe",
+        url: "Adobe",
 
     },
     {
         id: 3,
-        Url: "Vite",
+        url: "Vite",
     },
     {
         id: 4,
-        Url: "HTML5",
+        url: "HTML5",
     },
     {
         id: 5,
-        Url: "CSS3",
+        url: "CSS3",
     },
     {
         id: 6,
-        Url: "Scss",
+        url: "Scss",
     },
     {
         id: 7,
-        Url: "JavaScript",
+        url: "JavaScript",
     },
     {
         id: 8,
-        Url: "TypeScript",
+        url: "TypeScript",
     },
     {
         id: 9,
-        Url: "Vue.js",
+        url: "Vue.js",
     },
     {
         id: 10,
-        Url: "React.js",
+        url: "React.js",
     },
 ];
 

@@ -1,11 +1,11 @@
-const NavLink: { Name: string; Url: string }[] = [
+const NavLink: { name: string; url: string }[] = [
     {
-        Name: "About",
-        Url: "/about"
+        name: "About",
+        url: "/about"
     },
     {
-        Name: "Parliamo",
-        Url: "/parliamo"
+        name: "Parliamo",
+        url: "/parliamo"
     }
 ];
 
