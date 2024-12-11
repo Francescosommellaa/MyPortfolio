@@ -6,10 +6,10 @@ import Navbar from "./Components/Molecules/Navbar/Navbar";
 import Footer from "./Components/Molecules/Footer/Footer";
 
 // pages
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Parliamo from "./pages/Parliamo/Parliamo";
-import Project from "./pages/Project/Project";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Parliamo from "./Pages/Parliamo/Parliamo";
+import Project from "./Pages/Project/Project";
 
 const App: React.FC = () => {
   return (

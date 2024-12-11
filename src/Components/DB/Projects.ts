@@ -1,9 +1,8 @@
 const Projects: {
     slug: string;
     Title: string;
-    WesiteUrl: string;
     Url: string;
-    DateOfPublication: string;
+    Date: string;
     CreatorName: string;
     Services: string;
     Description: string;
@@ -13,9 +12,8 @@ const Projects: {
         {
             slug: "boolzapp",
             Title: "Boolzapp",
-            Url: "/Boolzapp",
-            WesiteUrl: "https://github.com/Francescosommellaa/vue-boolzapp",
-            DateOfPublication: "07/2024",
+            Url: "https://github.com/Francescosommellaa/vue-boolzapp",
+            Date: "07/2024",
             CreatorName: "Francesco Sommella",
             Services: "Front-end Developer",
             Description:
@@ -26,9 +24,8 @@ const Projects: {
         {
             slug: "element-gaming",
             Title: "Element Gaming",
-            Url: "/Element-Gaming",
-            WesiteUrl: "https://element-gaming.eu/",
-            DateOfPublication: "07/2023",
+            Url: "https://element-gaming.eu/",
+            Date: "07/2023",
             CreatorName: "Francesco Sommella",
             Services: "UX/UI Design",
             Description:
@@ -39,9 +36,8 @@ const Projects: {
         {
             slug: "morra-cinese",
             Title: "Morra Cinese",
-            Url: "/MorraCinese",
-            WesiteUrl: "https://github.com/Francescosommellaa/MorraCinese",
-            DateOfPublication: "10/2024",
+            Url: "https://github.com/Francescosommellaa/MorraCinese",
+            Date: "10/2024",
             CreatorName: "Francesco Sommella",
             Services: "Front-end Developer",
             Description:
@@ -52,9 +48,8 @@ const Projects: {
         {
             slug: "todo-list",
             Title: "Todo List",
-            Url: "/todolist",
-            WesiteUrl: "https://github.com/Francescosommellaa/vue-todolist",
-            DateOfPublication: "06/2024",
+            Url: "https://github.com/Francescosommellaa/vue-todolist",
+            Date: "06/2024",
             CreatorName: "Francesco Sommella",
             Services: "Front-end Developer",
             Description:

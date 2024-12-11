@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// DB
 import Projects from "../../DB/Projects";
 
 // SCSS
@@ -41,9 +43,7 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
           </div>
           <div className="description">
             <span className="text-placeholder">{project.Services}</span>
-            <span className="text-placeholder">
-              {project.DateOfPublication}
-            </span>
+            <span className="text-placeholder">{project.Date}</span>
           </div>
         </div>
       ))}
