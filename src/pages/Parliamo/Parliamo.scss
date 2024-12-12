@@ -1,3 +1,27 @@
 @use "../../styles/general" as *;
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
+
+.parliamo {
+  color: $gray-scale--1;
+
+  padding: $padding-L;
+
+  .parliamo-container {
+    display: flex;
+    margin: 8rem auto;
+    justify-content: space-between;
+
+    .message-container {
+      display: flex;
+      gap: $gap-4;
+      width: 20%;
+
+      .me {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
