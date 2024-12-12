@@ -24,40 +24,37 @@
     gap: $gap-5;
   }
 
-  .info-container {
+  .bottom-container {
     display: flex;
     flex-direction: column;
     gap: $gap-8;
 
-    .secondary-info {
+    .info-container {
       display: flex;
-      flex-direction: column;
-      color: $gray-scale-4;
-      gap: $gap-8;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: $gray-scale-6;
+      gap: $gap-4;
 
-      .info {
-        display: flex;
-        justify-content: space-between;
-        color: $gray-scale-6;
-        flex-wrap: wrap;
-        gap: $gap-4;
+      .text-placeholder {
+        color: $gray-scale--1;
+        display: block;
+      }
+    }
 
-        .text-placeholder {
-          color: $gray-scale--1;
-          display: block;
-        }
+    .description-container {
+      display: flex;
+      justify-content: space-between;
+
+      hr {
+        height: 80%;
+        margin: auto $gap-6;
+        border: 1px solid $gray-scale-8-5;
+        border-radius: $border-radius-circle;
       }
 
-      .description-container {
-        display: flex;
-        justify-content: space-between;
-
-        hr {
-          height: 80%;
-          margin: auto $gap-6;
-          border: 1px solid $gray-scale-8-5;
-          border-radius: $border-radius-circle;
-        }
+      .text-paragraph-L {
+        width: calc(100% / 2);
       }
     }
   }

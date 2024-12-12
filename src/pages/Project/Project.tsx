@@ -6,6 +6,8 @@ import Projects from "../../Components/DB/Projects";
 
 // SCSS
 import "./Project.scss";
+
+// Atoms
 import Button from "../../Components/Atoms/Button/Button";
 
 const Project: React.FC = () => {
@@ -34,7 +36,7 @@ const Project: React.FC = () => {
 
         {/* link al sito */}
         <a href={`${url}`}>
-          <Button size="S" text="Vai al Sito" iconName="Arrow-min-right" />
+          <Button size="S" text="Vai al Sito" iconName="Esterno" />
         </a>
       </div>
 
@@ -53,30 +55,28 @@ const Project: React.FC = () => {
         ))}
       </div>
 
-      <div className="info-container">
-        <div className="secondary-info">
-          <div className="info">
-            {/* altre info */}
-            <div>
-              <span className="text-placeholder">Anno:</span>
-              <span className="text-paragraph-S">{year}</span>
-            </div>
-            <div>
-              <span className="text-placeholder">Creatore:</span>
-              <span className="text-paragraph-S">{creatorName}</span>
-            </div>
-            <div>
-              <span className="text-placeholder">Ruolo:</span>
-              <span className="text-paragraph-S">{services}</span>
-            </div>
+      <div className="bottom-container">
+        {/* altre info */}
+        <div className="info-container">
+          <div>
+            <span className="text-placeholder">Anno:</span>
+            <span className="text-paragraph-M">{year}</span>
           </div>
+          <div>
+            <span className="text-placeholder">Creatore:</span>
+            <span className="text-paragraph-M">{creatorName}</span>
+          </div>
+          <div>
+            <span className="text-placeholder">Ruolo:</span>
+            <span className="text-paragraph-M">{services}</span>
+          </div>
+        </div>
 
-          {/* Descrizione */}
-          <div className="description-container">
-            <p className="text-paragraph-M">{description}</p>
-            <hr />
-            <p className="text-paragraph-M">{descriptionTwo}</p>
-          </div>
+        {/* Descrizione */}
+        <div className="description-container">
+          <p className="text-paragraph-L">{description}</p>
+          <hr />
+          <p className="text-paragraph-L">{descriptionTwo}</p>
         </div>
       </div>
     </main>
