@@ -19,9 +19,13 @@
   .hero-content {
     display: flex;
     justify-content: end;
-    align-items: baseline;
+    align-items: flex-start;
     margin-top: 2rem;
     gap: $gap-5;
+
+    img {
+      padding-top: 0.4rem;
+    }
 
     .text-paragraph-L {
       width: 60%;
