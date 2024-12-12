@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
+// DB
+import SocialLinks from "../../DB/Social";
+
 // SCSS
 import "./Footer.scss";
 
@@ -11,14 +14,19 @@ import Logo from "../../Atoms/Logo/Logo";
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
+      {/* Logo */}
       <Link to="/">
         <Logo size="S" light={true} />
       </Link>
+
+      {/* Titolo */}
       <div className="title">
         <h1>
           Lavoriamo <br /> Insieme
         </h1>
       </div>
+
+      {/* Contatti */}
       <div className="contact-container">
         <a
           href="mailto:Info@francescosommella.design"
@@ -41,54 +49,24 @@ const Footer: React.FC = () => {
         </a>
       </div>
 
+      {/* Social & info */}
       <div className="info-container">
-        {/* social */}
         <div>
           <span className="text-placeholder">Social</span>
           <div className="social-container">
-            <a
-              className="text-paragraph-small"
-              href="https://www.awwwards.com/sites/lifeworld-by-olafur-eliasson"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Awwwards
-            </a>
-            <a
-              className="text-paragraph-small"
-              href="https://www.linkedin.com/in/francescosommellaa/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Linkedin
-            </a>
-            <a
-              className="text-paragraph-small"
-              href="https://www.instagram.com/designby.fra/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-            <a
-              className="text-paragraph-small"
-              href="https://twitter.com/Designby_fra"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              X(Twitter)
-            </a>
-            <a
-              className="text-paragraph-small"
-              href="https://www.behance.net/designby_fra"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Behance
-            </a>
+            {SocialLinks.map((social) => (
+              <a
+                className="text-paragraph-small"
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {social.name}
+              </a>
+            ))}
           </div>
         </div>
-        {/* info */}
+
         <span className="text-placeholder">
           Ideato, <br /> progettato e <br />
           Sviluppato da me

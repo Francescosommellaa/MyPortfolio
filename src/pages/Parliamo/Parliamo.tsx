@@ -1,6 +1,6 @@
 import React from "react";
 
-// Scss
+// SCSS
 import "./Parliamo.scss";
 import Form from "../../Components/Atoms/Form/Form";
 
