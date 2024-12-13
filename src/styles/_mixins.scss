@@ -1,13 +1,19 @@
+@use "variables";
+
 // ====================
 // Mixin per Responsive
 
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == tablet {
-    @media (max-width: $breakpoint-tablet) {
+  @if $breakpoint == mobile {
+    @media (max-width: variables.$breakpoint-mobile) {
       @content;
     }
-  } @else if $breakpoint == mobile {
-    @media (max-width: $breakpoint-mobile) {
+  } @else if $breakpoint == tablet {
+    @media (min-width: #{ variables.$breakpoint-mobile + 1 }) and (max-width: variables.$breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: variables.$breakpoint-desktop) {
       @content;
     }
   }

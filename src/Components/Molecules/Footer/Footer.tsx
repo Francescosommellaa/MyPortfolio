@@ -54,12 +54,13 @@ const Footer: React.FC = () => {
         <div>
           <span className="text-placeholder">Social</span>
           <div className="social-container">
-            {SocialLinks.map((social) => (
+            {SocialLinks.map((social, index) => (
               <a
                 className="text-paragraph-small"
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                key={index}
               >
                 {social.name}
               </a>

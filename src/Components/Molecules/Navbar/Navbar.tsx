@@ -9,6 +9,7 @@ import "./Navbar.scss";
 
 // Atoms
 import Logo from "../../Atoms/Logo/Logo";
+import Sidebar from "../../Atoms/Sidebar/Sidebar";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -33,6 +34,8 @@ const Navbar: React.FC = () => {
           </li>
         ))}
       </ul>
+
+      <Sidebar />
     </nav>
   );
 };
