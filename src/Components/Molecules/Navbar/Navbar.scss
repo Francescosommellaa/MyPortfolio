@@ -51,4 +51,11 @@
       }
     }
   }
+  @include respond-to(mobile) {
+    padding: $padding-M;
+
+    .nav-links {
+      display: none;
+    }
+  }
 }
