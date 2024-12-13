@@ -1,4 +1,19 @@
 // ====================
+// Mixin per Responsive
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == mobile {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  }
+}
+
+// ====================
 //Mixin per Stili Tipografici
 
 @mixin typography($font-family, $font-size, $line-height, $text-weight) {
@@ -10,12 +25,14 @@
 
 // ====================
 //Mixin per Testo in Maiuscolo
+
 @mixin uppercase {
   text-transform: uppercase;
 }
 
 // ====================
 //Mixin per i bottoni seccondari
+
 @mixin btn($btn-font-size, $btn-border-weight) {
   font-size: $btn-font-size;
   border: $btn-border-weight;
