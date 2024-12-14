@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 // SCSS
 import "./Parliamo.scss";
@@ -13,7 +14,12 @@ const Parliamo: React.FC = () => {
   const Size = useSize();
 
   return (
-    <main className="parliamo">
+    <main className="parliamo" aria-label="Parliamo Page">
+      {/* Titolo dinamico */}
+      <Helmet>
+        <title>Design by Fra | Parliamo</title>
+      </Helmet>
+
       {Size === "S" ? (
         <h3>Facciamo la Differenza Insieme</h3>
       ) : Size === "M" ? (

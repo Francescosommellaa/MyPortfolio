@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 // Hooks
 import { useSize } from "../../Hooks/useSize";
@@ -39,7 +40,12 @@ const Project: React.FC = () => {
   } = project;
 
   return (
-    <main className="project-container">
+    <main className="project-container" aria-label="Project Page">
+      {/* Titolo dinamicop */}
+      <Helmet>
+        <title>Design by Fra | {title}</title>
+      </Helmet>
+
       <div className="main-info">
         {/* Titolo */}
         {Size === "S" ? (

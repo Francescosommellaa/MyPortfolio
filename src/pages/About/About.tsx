@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
 
 // DB
 import AboutText from "../../Components/DB/AboutText";
@@ -23,7 +24,12 @@ const About: React.FC = () => {
   const Size = useSize();
 
   return (
-    <main className="about">
+    <main className="about" aria-label="About Page">
+      {/* Titolo dinamico */}
+      <Helmet>
+        <title>Design by Fra | About</title>
+      </Helmet>
+
       {Size === "S" ? (
         <h2>Supporto i Brand al Successo Digitale</h2>
       ) : Size === "M" ? (

@@ -1,5 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
+import { Helmet } from "react-helmet-async";
 
 // Molecules
 import Hero from "../../Components/Molecules/Hero/Hero";
@@ -9,7 +10,12 @@ import Tools from "../../Components/Molecules/Tools/Tools";
 const Home: React.FC = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   return (
-    <main>
+    <main aria-label="Home Page">
+      {/* Titolo dinamico */}
+      <Helmet>
+        <title>Design by Fra | Designer & Developer</title>
+      </Helmet>
+
       <Hero />
       <Work />
       <Tools size={isMobile ? "S" : "M"} />
