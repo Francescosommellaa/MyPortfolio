@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import FormInfo from "../../DB/FormInfo";
 
-// Scss
+// SCSS
 import "./Form.scss";
 
 // Atoms
@@ -11,159 +11,131 @@ interface FormDataprops {
   size: "S" | "M" | "L";
 }
 
-type FormErrors = {
-  name?: string;
-  phone?: string;
-  email?: string;
-};
-
 const Form: React.FC<FormDataprops> = ({ size }) => {
-  const [name, setName] = useState<string>("");
-  const [phone, setPhone] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [errors, setErrors] = useState<FormErrors>({});
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [successMessage, setSuccessMessage] = useState("");
 
-  const navigate = useNavigate();
-
-  const validate = () => {
-    const newErrors: FormErrors = {};
-
-    // validazione del nome
-    if (!name) {
-      newErrors.name = "Hai dimenticato di inserire il tuo nome!";
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+    if (!formData.name)
+      newErrors.name = "Hai dimenticato di inserire il nome completo.";
+    if (!formData.phone) {
+      newErrors.phone = "Hai dimenticato di inserire il numero di telefono.";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Inserisci un numero di telefono valido (10 cifre).";
     }
-
-    // validazione del numero
-    const phoneRegex = /^\d{10}$/;
-    if (!phone) {
-      newErrors.phone = "Hai dimenticato di inserire il tuo numero!";
-    } else if (!phoneRegex.test(phone)) {
-      newErrors.phone =
-        "Devono essere 10 numeri, non puoi inserire lettere o caratteri speciali";
+    if (!formData.email) {
+      newErrors.email = "Hai dimenticato di inserire l'email.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Inserisci una email valida.";
     }
-
-    //   validazione email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email) {
-      newErrors.email = "Hai dimenticato di inserire il tuo numero!";
-    } else if (!emailRegex.test(email)) {
-      newErrors.email = `Questa email non è valida!`;
-    }
-
     return newErrors;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-    } else {
-      setTimeout(() => {
-        navigate("/");
-      }, 2000);
+    const validationErrors = validateForm();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      setSuccessMessage(
+        "Grazie mille per aver compilato il form! Ti risponderò al più presto."
+      );
+
+      setTimeout(() => setSuccessMessage(""), 6000);
+
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+
+      try {
+        await fetch("/", {
+          method: "POST",
+          body: formData,
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        });
+
+        form.reset();
+      } catch (error) {
+        console.error("Errore durante l'invio del form:", error);
+        setSuccessMessage("Si è verificato un errore. Per favore riprova.");
+        setTimeout(() => setSuccessMessage(""), 6000);
+      }
     }
   };
+
   return (
     <form
       className={`form form-${size}`}
-      onSubmit={handleSubmit}
       noValidate
       data-netlify="true"
+      name="contact-form"
+      onSubmit={handleSubmit}
     >
-      {/* nome */}
-      <div className="input-container">
-        <div className="input-main">
-          <span className="text-placeholder">o1</span>
-          <div className="input-content">
-            <label htmlFor="name">
-              <span className="subtitle-M">Nome Completo *</span>
-            </label>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              id="name"
-              placeholder="Mario Rossi"
-              className="text-paragraph-L"
-              required
-            />
-          </div>
-        </div>
-        {errors.name && (
-          <small className="text-placeholder">{errors.name}</small>
-        )}
-      </div>
+      <input type="hidden" name="form-name" value="contact-form" />
 
-      {/* Numero di Telefono */}
-      <div className="input-container">
-        <div className="input-main">
-          <span className="text-placeholder">o2</span>
-          <div className="input-content">
-            <label htmlFor="name">
-              <span className="subtitle-M">Numero di Telefono *</span>
-            </label>
-            <input
-              type="phone"
-              name="phone number"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              id="phone number"
-              placeholder="3783876455"
-              className="text-paragraph-L"
-              required
-            />
-          </div>
-        </div>
-        {errors.phone && (
-          <small className="text-placeholder">{errors.phone}</small>
-        )}
-      </div>
+      {successMessage && (
+        <small className="text-placeholder success-message">
+          {successMessage}
+        </small>
+      )}
 
-      {/* email */}
-      <div className="input-container">
-        <div className="input-main">
-          <span className="text-placeholder">o3</span>
+      {/* input */}
+      {FormInfo.map((form) => (
+        <div className="input-main" key={form.id}>
+          <span className="text-placeholder">{form.number}</span>
           <div className="input-content">
-            <label htmlFor="name">
-              <span className="subtitle-M">Email *</span>
+            <label htmlFor={form.id}>
+              <span className={`subtitle-${size}`}>{form.label}</span>
             </label>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              id="email"
-              placeholder="fra@example.com"
-              className="text-paragraph-L"
-              required
-            />
+            {form.type === "textarea" ? (
+              <textarea
+                name={form.name}
+                id={form.id}
+                placeholder={form.placeholder}
+                className={`text-paragraph-${size}`}
+                maxLength={150}
+                onChange={handleChange}
+              ></textarea>
+            ) : (
+              <input
+                type={form.type}
+                name={form.name}
+                id={form.id}
+                placeholder={form.placeholder}
+                className={`text-paragraph-${size}`}
+                onChange={handleChange}
+                onInput={(e) => {
+                  if (form.id === "phone") {
+                    const target = e.target as HTMLInputElement;
+                    target.value = target.value.replace(/[^0-9]/g, "");
+                  }
+                }}
+                required
+              />
+            )}
+            {errors[form.id as keyof typeof errors] && (
+              <small className="text-placeholder error-message">
+                {errors[form.id as keyof typeof errors]}
+              </small>
+            )}
           </div>
         </div>
-        {errors.email && (
-          <small className="text-placeholder">{errors.email}</small>
-        )}
-      </div>
-
-      {/* Messaggio */}
-      <div className="input-container">
-        <div className="input-main">
-          <span className="text-placeholder">o4</span>
-          <div className="input-content">
-            <label htmlFor="name">
-              <span className="subtitle-M">Messaggio</span>
-            </label>
-            <input
-              type="textarea"
-              name="message"
-              id="message"
-              placeholder="Ciao Fra, Vorrei il tuo aiuto per..."
-              className="text-paragraph-L"
-            />
-          </div>
-        </div>
-      </div>
+      ))}
 
       {/* bottone */}
       <div className="button-container">
