@@ -1,6 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
+// Hooks
+import { useSize } from "../../Hooks/useSize";
+
 // DB
 import Projects from "../../Components/DB/Projects";
 
@@ -11,11 +14,18 @@ import "./Project.scss";
 import Button from "../../Components/Atoms/Button/Button";
 
 const Project: React.FC = () => {
+  const Size = useSize();
   const { slug } = useParams<{ slug: string }>();
   const project = Projects.find((p) => p.slug === slug);
 
   if (!project) {
-    return <h1>Progetto non trovato</h1>;
+    return Size === "S" ? (
+      <h3>Progetto non trovato</h3>
+    ) : Size === "M" ? (
+      <h2>Progetto non trovato</h2>
+    ) : (
+      <h1>Progetto non trovato</h1>
+    );
   }
   const {
     title,
@@ -32,11 +42,17 @@ const Project: React.FC = () => {
     <main className="project-container">
       <div className="main-info">
         {/* Titolo */}
-        <h1>{title}</h1>
+        {Size === "S" ? (
+          <h3>{title}</h3>
+        ) : Size === "M" ? (
+          <h2>{title}</h2>
+        ) : (
+          <h1>{title}</h1>
+        )}
 
         {/* link al sito */}
         <a href={`${url}`}>
-          <Button size="S" text="Vai al Sito" iconName="Esterno" />
+          <Button size="S" text="Sito Live" iconName="Esterno" />
         </a>
       </div>
 
@@ -60,23 +76,27 @@ const Project: React.FC = () => {
         <div className="info-container">
           <div>
             <span className="text-placeholder">Anno:</span>
-            <span className="text-paragraph-M">{year}</span>
+            <span className={`text-paragraph-${Size}`}>{year}</span>
           </div>
           <div>
             <span className="text-placeholder">Creatore:</span>
-            <span className="text-paragraph-M">{creatorName}</span>
+            <span className={`text-paragraph-${Size}`}>{creatorName}</span>
           </div>
           <div>
             <span className="text-placeholder">Ruolo:</span>
-            <span className="text-paragraph-M">{services}</span>
+            <span className={`text-paragraph-${Size}`}>{services}</span>
           </div>
         </div>
 
         {/* Descrizione */}
         <div className="description-container">
-          <p className="text-paragraph-L">{description}</p>
+          <p className={`text-paragraph text-paragraph-${Size}`}>
+            {description}
+          </p>
           <hr />
-          <p className="text-paragraph-L">{descriptionTwo}</p>
+          <p className={`text-paragraph text-paragraph-${Size}`}>
+            {descriptionTwo}
+          </p>
         </div>
       </div>
     </main>

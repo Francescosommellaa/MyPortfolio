@@ -4,16 +4,17 @@
 
 .project-container {
   color: $gray-scale--1;
-  height: 100vh;
   padding: $padding-L;
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: $gap-8;
+  margin-bottom: 4rem;
 
   .img-container {
     display: flex;
     gap: $gap-4;
+    overflow: hidden;
   }
 
   .main-info {
@@ -31,7 +32,6 @@
 
     .info-container {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       color: $gray-scale-6;
       gap: $gap-4;
@@ -45,16 +45,53 @@
     .description-container {
       display: flex;
       justify-content: space-between;
+      gap: $gap-6;
 
       hr {
-        height: 80%;
-        margin: auto $gap-6;
+        height: 3rem;
         border: 1px solid $gray-scale-8-5;
         border-radius: $border-radius-circle;
       }
 
-      .text-paragraph-L {
+      .text-paragraph {
+        color: $gray-scale-1;
         width: calc(100% / 2);
+      }
+    }
+  }
+
+  @include respond-to(mobile) {
+    padding: $padding-M;
+    .img-container {
+      img {
+        width: 280px;
+      }
+    }
+
+    .bottom-container {
+      .info-container {
+        flex-direction: column;
+      }
+
+      .description-container {
+        flex-wrap: wrap;
+        gap: $gap-4;
+
+        hr {
+          display: none;
+        }
+
+        .text-paragraph {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include respond-to(tablet) {
+    .img-container {
+      img {
+        height: 332px;
       }
     }
   }

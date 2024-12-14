@@ -18,8 +18,14 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
   return (
     <div className={`container-cards container-cards-${size}`}>
       {Projects.map((project) => (
-        <div key={project.slug} className="project-card">
-          <h6 className="project-title">{project.title}</h6>
+        <div key={project.slug} className={`project-card project-card-${size}`}>
+          {size === "S" ? (
+            <h6 className="project-title">{project.title}</h6>
+          ) : size === "M" ? (
+            <h5 className="project-title">{project.title}</h5>
+          ) : (
+            <h4 className="project-title">{project.title}</h4>
+          )}
           <div className="img-container">
             <Link to={`/project/${project.slug}`}>
               <img
@@ -42,8 +48,8 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
             </Link>
           </div>
           <div className="description">
-            <span className="text-placeholder">{project.services}</span>
-            <span className="text-placeholder">{project.year}</span>
+            <span className={`text-paragraph-${size}`}>{project.services}</span>
+            <span className={`text-paragraph-${size}`}>{project.year}</span>
           </div>
         </div>
       ))}

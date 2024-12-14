@@ -26,6 +26,8 @@ const About: React.FC = () => {
     <main className="about">
       {Size === "S" ? (
         <h2>Supporto i Brand al Successo Digitale</h2>
+      ) : Size === "M" ? (
+        <h2>Supporto i Brand al Successo Digitale</h2>
       ) : (
         <h1>Supporto i Brand al Successo Digitale</h1>
       )}

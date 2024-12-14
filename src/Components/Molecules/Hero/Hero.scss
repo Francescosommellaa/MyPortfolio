@@ -12,7 +12,9 @@
   padding: $padding-L;
   background-color: $gray-scale-10;
 
-  h1 {
+  h1,
+  h2,
+  h3 {
     color: $gray-scale--1;
   }
 
@@ -27,8 +29,22 @@
       padding-top: 0.4rem;
     }
 
-    .text-paragraph-L {
+    .text-paragraph {
       width: 60%;
+
+      &-S {
+        width: 70%;
+      }
+      &-M {
+        width: 60%;
+      }
+      &-L {
+        width: 50%;
+      }
     }
+  }
+
+  @include respond-to(mobile) {
+    padding: $padding-M;
   }
 }
