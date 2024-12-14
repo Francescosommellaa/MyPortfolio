@@ -40,6 +40,38 @@
 
     .social-container {
       display: flex;
+      flex-wrap: wrap;
+
+      a:hover {
+        color: $gray-scale-10;
+      }
+    }
+  }
+
+  @include respond-to(mobile) {
+    padding: $padding-M;
+
+    .info-container {
+      flex-wrap: wrap;
+      gap: $gap-5;
+      align-items: start;
+    }
+
+    .contact-container {
+      flex-wrap: wrap;
+      align-items: start;
+    }
+  }
+
+  @include respond-to(tablet) {
+    .info-container {
+      flex-wrap: wrap;
+      gap: $gap-5;
+    }
+
+    .contact-container {
+      flex-wrap: wrap;
+      align-items: start;
     }
   }
 }

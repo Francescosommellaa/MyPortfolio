@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
+// Hooks
+import { useSize } from "../../../Hooks/useSize";
+
 // DB
 import SocialLinks from "../../DB/Social";
 
@@ -12,6 +15,8 @@ import Button from "../../Atoms/Button/Button";
 import Logo from "../../Atoms/Logo/Logo";
 
 const Footer: React.FC = () => {
+  const Size = useSize();
+
   return (
     <footer className="footer">
       {/* Logo */}
@@ -29,13 +34,13 @@ const Footer: React.FC = () => {
       {/* Contatti */}
       <div className="contact-container">
         <a
-          href="mailto:Info@francescosommella.design"
+          href="mailto:Info@francescosommella.it"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Button
-            text="Info@francescosommella.design"
-            size={"M"}
+            text="Info@francescosommella.it"
+            size={`${Size}`}
             withIcon={false}
             light={true}
           />
@@ -45,7 +50,12 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button text="3773711446" size={"M"} withIcon={false} light={true} />
+          <Button
+            text="3773711446"
+            size={`${Size}`}
+            withIcon={false}
+            light={true}
+          />
         </a>
       </div>
 
@@ -56,7 +66,7 @@ const Footer: React.FC = () => {
           <div className="social-container">
             {SocialLinks.map((social, index) => (
               <a
-                className="text-paragraph-small"
+                className="text-paragraph-S"
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
