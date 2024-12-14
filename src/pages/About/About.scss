@@ -105,6 +105,7 @@
     .about-main {
       gap: $gap-6;
       flex-wrap: wrap;
+      margin: 4rem auto;
       .description {
         width: 100%;
       }
@@ -125,6 +126,7 @@
       width: 100%;
     }
     .about-main {
+      margin: 6rem auto;
       gap: $gap-4;
       flex-wrap: nowrap;
     }

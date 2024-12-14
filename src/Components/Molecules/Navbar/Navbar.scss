@@ -4,11 +4,12 @@
 @use "../../../styles/typography" as *;
 
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   padding: $padding-L;
+  margin: 0 auto;
   z-index: 1000;
 
   background-color: #0d0d0d31;
