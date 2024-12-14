@@ -6,10 +6,10 @@
   color: $gray-scale--1;
   padding: $padding-L;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   gap: $gap-8;
-  margin-bottom: 4rem;
+  margin: 6rem auto;
+  min-height: 70vh;
 
   .img-container {
     display: flex;
@@ -94,5 +94,10 @@
         height: 332px;
       }
     }
+  }
+
+  @include respond-to(mobile) {
+    padding: $padding-M;
+    margin: 4rem auto;
   }
 }
