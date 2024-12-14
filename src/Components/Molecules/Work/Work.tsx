@@ -13,7 +13,7 @@ import SectionTitle from "../../Atoms/SectionTitle/SectionTitle";
 const Work: React.FC = () => {
   const Size = useSize();
   return (
-    <section className="work-container">
+    <section className="work-container" aria-label="Work Section">
       {/* work cards */}
       <SectionTitle size={Size} text="Lavori" />
       <WorkCards size={Size} />

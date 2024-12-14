@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   const Size = useSize();
 
   return (
-    <header className="hero-container">
+    <header className="hero-container" aria-label="Hero Section">
       {Size === "S" ? (
         <h3>Human ≠ Robot</h3>
       ) : Size === "M" ? (

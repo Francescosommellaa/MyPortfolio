@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
   const Size = useSize();
 
   return (
-    <footer className="footer">
+    <footer className="footer" aria-label="Footer">
       {/* Logo */}
       <Link to="/">
         <Logo size="S" light={true} />

@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 // Molecules
 import Navbar from "./Components/Molecules/Navbar/Navbar";
@@ -13,7 +14,7 @@ import Project from "./Pages/Project/Project";
 
 const App: React.FC = () => {
   return (
-    <>
+    <HelmetProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -24,7 +25,7 @@ const App: React.FC = () => {
         </Routes>
         <Footer />
       </Router>
-    </>
+    </HelmetProvider>
   );
 };
 

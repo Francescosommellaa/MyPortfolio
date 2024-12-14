@@ -12,7 +12,7 @@ interface Toolsprops {
 
 const Tools: React.FC<Toolsprops> = ({ size }) => {
   return (
-    <section className="tools-container">
+    <section className="tools-container" aria-label="Tools Section">
       {ToolsImg.map((tools) => (
         <img
           src={
@@ -21,7 +21,7 @@ const Tools: React.FC<Toolsprops> = ({ size }) => {
               import.meta.url
             ).href
           }
-          alt={`${tools.url}`}
+          alt={`${tools.url} tool icon`}
           key={tools.id}
         />
       ))}

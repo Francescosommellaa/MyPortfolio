@@ -38,7 +38,7 @@ const Sidebar: React.FC = () => {
   }, [isOpen]);
 
   return (
-    <div className="sidebar-container">
+    <nav className="sidebar-container" aria-label="Sidebar">
       {/* Icona del menu */}
       <a className="menu-icon" onClick={toggleSidebar}>
         <img src={!isOpen ? menuIcon : closeIcon} alt="Close menu" />
@@ -92,7 +92,7 @@ const Sidebar: React.FC = () => {
           ))}
         </footer>
       </div>
-    </div>
+    </nav>
   );
 };
 
