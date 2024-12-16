@@ -27,7 +27,10 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
             <h4 className="project-title">{project.title}</h4>
           )}
           <div className="img-container">
-            <Link to={`/project/${project.slug}`}>
+            <Link
+              to={`/project/${project.slug}`}
+              title={`Vedi Progetto ${project.slug}`}
+            >
               <img
                 src={
                   new URL(
@@ -39,16 +42,11 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
                 className="project-cover"
                 loading="lazy"
               />
-              <Link
-                to={`/project/${project.slug}`}
-                title={`Vedi Progetto ${project.slug}`}
-              >
-                <Button
-                  size="S"
-                  text="Vedi Progetto"
-                  iconName="Arrow-min-right"
-                />
-              </Link>
+              <Button
+                size="S"
+                text="Vedi Progetto"
+                iconName="Arrow-min-right"
+              />
             </Link>
           </div>
           <div className="description">
