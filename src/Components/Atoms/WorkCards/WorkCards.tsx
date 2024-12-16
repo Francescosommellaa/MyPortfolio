@@ -37,8 +37,12 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
                 }
                 alt={`${project.title} cover`}
                 className="project-cover"
+                loading="lazy"
               />
-              <Link to={`/project/${project.slug}`}>
+              <Link
+                to={`/project/${project.slug}`}
+                title={`Vedi Progetto ${project.slug}`}
+              >
                 <Button
                   size="S"
                   text="Vedi Progetto"

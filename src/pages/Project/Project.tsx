@@ -82,15 +82,21 @@ const Project: React.FC = () => {
         <div className="info-container">
           <div>
             <span className="text-placeholder">Anno:</span>
-            <span className={`text-paragraph-${Size}`}>{year}</span>
+            <span className={`text-paragraph text-paragraph-${Size}`}>
+              {year}
+            </span>
           </div>
           <div>
             <span className="text-placeholder">Creatore:</span>
-            <span className={`text-paragraph-${Size}`}>{creatorName}</span>
+            <span className={`text-paragraph text-paragraph-${Size}`}>
+              {creatorName}
+            </span>
           </div>
           <div>
             <span className="text-placeholder">Ruolo:</span>
-            <span className={`text-paragraph-${Size}`}>{services}</span>
+            <span className={`text-paragraph text-paragraph-${Size}`}>
+              {services}
+            </span>
           </div>
         </div>
 

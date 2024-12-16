@@ -26,6 +26,8 @@ const Hero: React.FC = () => {
               import.meta.url
             ).href
           }
+          alt=""
+          role="presentation"
         />
         <p className={`text-paragraph-${Size}`}>
           Progetto e sviluppo siti web su misura, pensati per le esigenze dei

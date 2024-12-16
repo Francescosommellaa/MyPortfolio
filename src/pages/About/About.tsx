@@ -46,6 +46,7 @@ const About: React.FC = () => {
                 import.meta.url
               ).href
             }
+            alt="immagine che raffigura Francesco Sommella"
           />
           <div className="text">
             {AboutText.slice(0, visibleParagraphs).map((about, index) => (
@@ -89,7 +90,9 @@ const About: React.FC = () => {
               <span className={`subtitle subtitle-${Size}`}>
                 {service.name}
               </span>
-              <p className={`text-paragraph-${Size}`}>{service.text}</p>
+              <p className={`text-paragraph text-paragraph-${Size}`}>
+                {service.text}
+              </p>
             </div>
           ))}
         </div>

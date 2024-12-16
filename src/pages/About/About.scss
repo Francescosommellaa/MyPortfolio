@@ -34,6 +34,9 @@
           padding-bottom: 0.8rem;
         }
 
+        a {
+          color: $gray-scale-4;
+        }
         a:hover {
           color: $gray-scale--1;
         }
@@ -90,8 +93,8 @@
           color: $gray-scale-0;
         }
 
-        .text-paragraph-M {
-          color: $gray-scale-4;
+        .text-paragraph {
+          color: $gray-scale-3;
         }
       }
     }
