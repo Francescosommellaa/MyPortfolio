@@ -1,28 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-// Hooks
-import { useSize } from "../../../Hooks/useSize";
-
-// DB
-import SocialLinks from "../../DB/Social";
 
 // SCSS
 import "./Footer.scss";
 
-// atoms
+// Atoms
 import Button from "../../Atoms/Button/Button";
 import Logo from "../../Atoms/Logo/Logo";
+import Cursor from "../../Atoms/Animation/Cursor/Cursor";
+
+// DB
+import SocialLinks from "../../DB/Social";
+
+// Hooks
+import { useSize } from "../../../Hooks/useSize";
 
 const Footer: React.FC = () => {
   const Size = useSize();
 
   return (
     <footer className="footer" aria-label="Footer">
+      <Cursor light={true} />
       {/* Logo */}
-      <Link to="/">
-        <Logo size="S" light={true} />
-      </Link>
+      <Logo size="S" light={true} />
 
       {/* Titolo */}
       <div className="title">

@@ -1,9 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-// DB
-import NavLink from "../../DB/NavLink";
-
 // SCSS
 import "./Navbar.scss";
 
@@ -11,14 +8,15 @@ import "./Navbar.scss";
 import Logo from "../../Atoms/Logo/Logo";
 import Sidebar from "../../Atoms/Sidebar/Sidebar";
 
+// DB
+import NavLink from "../../DB/NavLink";
+
 const Navbar: React.FC = () => {
   const location = useLocation();
 
   return (
     <nav className="navbar">
-      <Link to="/">
-        <Logo size={"S"} />
-      </Link>
+      <Logo size={"S"} />
 
       <ul className="nav-links">
         {NavLink.map((link) => (
@@ -29,7 +27,7 @@ const Navbar: React.FC = () => {
                 location.pathname === link.url ? "active" : ""
               }`}
             >
-              <span>{link.name}</span>
+              {link.name}
             </Link>
           </li>
         ))}

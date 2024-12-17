@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // SCSS
 import "./Logo.scss";
@@ -10,13 +11,14 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ size, light = false }) => {
   return (
-    <span
+    <Link
+      to="/"
       className={`logo-text logo-text-${
         light ? "light" : ""
       } logo-text-${size}`}
     >
       © Design by Fra
-    </span>
+    </Link>
   );
 };
 export default Logo;

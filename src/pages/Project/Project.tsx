@@ -2,17 +2,18 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-// Hooks
-import { useSize } from "../../Hooks/useSize";
-
-// DB
-import Projects from "../../Components/DB/Projects";
-
 // SCSS
 import "./Project.scss";
 
 // Atoms
 import Button from "../../Components/Atoms/Button/Button";
+import Cursor from "../../Components/Atoms/Animation/Cursor/Cursor";
+
+// DB
+import Projects from "../../Components/DB/Projects";
+
+// Hooks
+import { useSize } from "../../Hooks/useSize";
 
 const Project: React.FC = () => {
   const Size = useSize();
@@ -41,6 +42,7 @@ const Project: React.FC = () => {
 
   return (
     <main className="project-container" aria-label="Project Page">
+      <Cursor />
       {/* Titolo dinamicop */}
       <Helmet>
         <title>Design by Fra | {title}</title>

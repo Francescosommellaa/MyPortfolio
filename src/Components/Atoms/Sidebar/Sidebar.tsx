@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-// DB
-import NavLink from "../../DB/NavLink";
-import SocialLinks from "../../DB/Social";
-
 // SCSS
 import "./Sidebar.scss";
 
 // Atoms
 import Logo from "../Logo/Logo";
+
+// DB
+import NavLink from "../../DB/NavLink";
+import SocialLinks from "../../DB/Social";
 
 const menuIcon = new URL(
   "/src/Assets/Icon-Tools/Icon/Name=menu, Dimension=M.svg",

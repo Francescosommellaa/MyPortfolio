@@ -68,7 +68,8 @@
   .about-secondary {
     margin: 8rem auto;
 
-    h4 {
+    h4,
+    h5 {
       @include uppercase;
     }
 

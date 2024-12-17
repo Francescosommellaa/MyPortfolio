@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// DB
-import Projects from "../../DB/Projects";
-
 // SCSS
 import "./WorkCards.scss";
 
 // Atoms
 import Button from "../Button/Button";
+
+// DB
+import Projects from "../../DB/Projects";
 
 interface WorkCardsProps {
   size: "S" | "M" | "L";

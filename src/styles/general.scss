@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 body {
@@ -23,7 +24,6 @@ body {
     text-decoration: none;
     color: $gray-scale-6;
     margin: 0 0.8rem 0 0;
-    cursor: pointer;
   }
 
   li {
@@ -31,6 +31,17 @@ body {
   }
 
   // Title
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a {
+    width: fit-content;
+  }
   h1 {
     @include typography(
       $font-title,

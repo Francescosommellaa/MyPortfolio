@@ -36,19 +36,19 @@
   &-L {
     @include btn(map-get($btn-font-size, L), map-get($btn-border-weight, L));
   }
-}
 
-.light {
-  color: $gray-scale-10;
-  border-color: $gray-scale-10;
-  stroke: $gray-scale-10;
+  &.light {
+    color: $gray-scale-10;
+    border-color: $gray-scale-10;
+    stroke: $gray-scale-10;
 
-  &:hover {
-    background-color: $background-dark;
-    color: $gray-scale--1;
+    &:hover {
+      background-color: $background-dark;
+      color: $gray-scale--1;
 
-    path {
-      stroke: $gray-scale--1;
+      path {
+        stroke: $gray-scale--1;
+      }
     }
   }
 }

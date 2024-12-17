@@ -4,6 +4,9 @@ import { Helmet } from "react-helmet-async";
 // SCSS
 import "./Parliamo.scss";
 
+// Atoms
+import Cursor from "../../Components/Atoms/Animation/Cursor/Cursor";
+
 // Components
 import Form from "../../Components/Atoms/Form/Form";
 
@@ -15,6 +18,7 @@ const Parliamo: React.FC = () => {
 
   return (
     <main className="parliamo" aria-label="Parliamo Page">
+      <Cursor />
       {/* Titolo dinamico */}
       <Helmet>
         <title>Design by Fra | Parliamo</title>

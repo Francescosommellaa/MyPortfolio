@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
 
+// SCSS
+import "./About.scss";
+
+// Atoms
+import Cursor from "../../Components/Atoms/Animation/Cursor/Cursor";
+
 // DB
 import AboutText from "../../Components/DB/AboutText";
 import Service from "../../Components/DB/Service";
-
-// SCSS
-import "./About.scss";
 
 // Hooks
 import { useSize } from "../../Hooks/useSize";
@@ -25,6 +28,7 @@ const About: React.FC = () => {
 
   return (
     <main className="about" aria-label="About Page">
+      <Cursor />
       {/* Titolo dinamico */}
       <Helmet>
         <title>Design by Fra | About</title>
@@ -78,7 +82,7 @@ const About: React.FC = () => {
 
       <div className="about-secondary">
         {Size === "S" ? (
-          <h6>In cosa posso aiutarti</h6>
+          <h5>In cosa posso aiutarti</h5>
         ) : (
           <h4>In cosa posso aiutarti</h4>
         )}

@@ -1,10 +1,10 @@
 import React from "react";
 
-// DB
-import ToolsImg from "../../DB/ToolsImg";
-
 // SCSS
 import "./Tools.scss";
+
+// DB
+import ToolsImg from "../../DB/ToolsImg";
 
 interface Toolsprops {
   size: "S" | "M";

@@ -1,14 +1,14 @@
 import React from "react";
 
-// Hooks
-import { useSize } from "../../../Hooks/useSize";
-
 // SCSS
 import "./Work.scss";
 
 // Atoms
 import WorkCards from "../../Atoms/WorkCards/WorkCards";
 import SectionTitle from "../../Atoms/SectionTitle/SectionTitle";
+
+// Hooks
+import { useSize } from "../../../Hooks/useSize";
 
 const Work: React.FC = () => {
   const Size = useSize();
