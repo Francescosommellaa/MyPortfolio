@@ -7,6 +7,11 @@
   text-align: left;
   background-color: $background-light;
 
+  ::selection {
+    background-color: $background-dark;
+    color: $gray-scale--1;
+  }
+
   .title {
     justify-content: space-between;
     align-items: end;
