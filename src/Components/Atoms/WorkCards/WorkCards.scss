@@ -25,6 +25,9 @@
     display: flex;
     flex-direction: column;
     gap: $gap-1;
+    position: relative;
+    overflow: hidden;
+    will-change: opacity, transform;
 
     &-L {
       width: 36rem;
@@ -35,8 +38,8 @@
       height: 26rem;
     }
     &-S {
-      width: 16rem;
-      height: 10rem;
+      width: 100%;
+      height: 100%;
     }
 
     .project-title {
@@ -44,10 +47,16 @@
     }
 
     .img-container {
+      overflow: hidden;
+      height: 80%;
+      margin: auto;
+      transition: all 0.4s ease-in-out;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease-out;
+        will-change: transform;
       }
 
       Button {
@@ -108,7 +117,6 @@
         }
 
         .img-container {
-          position: static;
           &::before {
             content: none;
           }

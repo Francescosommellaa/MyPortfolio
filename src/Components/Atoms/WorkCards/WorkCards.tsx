@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 // SCSS
 import "./WorkCards.scss";
@@ -18,7 +19,18 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
   return (
     <div className={`container-cards container-cards-${size}`}>
       {Projects.map((project) => (
-        <div key={project.slug} className={`project-card project-card-${size}`}>
+        <motion.div
+          key={project.slug}
+          className={`project-card project-card-${size}`}
+          initial={{ opacity: 0, scale: 0.9, y: 50 }} // Stato iniziale
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: { duration: 1.2, ease: "easeOut" },
+          }}
+          viewport={{ once: false, amount: 0.8 }}
+        >
           {size === "S" ? (
             <h6 className="project-title">{project.title}</h6>
           ) : size === "M" ? (
@@ -31,7 +43,7 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
               to={`/project/${project.slug}`}
               title={`Vedi Progetto ${project.slug}`}
             >
-              <img
+              <motion.img
                 src={
                   new URL(
                     `/src/Assets/Project-img/Project-Cover/Name=${project.projectCover}.jpg`,
@@ -41,6 +53,8 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
                 alt={`${project.title} cover`}
                 className="project-cover"
                 loading="lazy"
+                whileHover={{ scale: 1.05 }} // Effetto di zoom in hover
+                transition={{ duration: 0.3 }}
               />
               <Button
                 size="S"
@@ -53,7 +67,7 @@ const WorkCards: React.FC<WorkCardsProps> = ({ size }) => {
             <span className={`text-paragraph-${size}`}>{project.services}</span>
             <span className={`text-paragraph-${size}`}>{project.year}</span>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
