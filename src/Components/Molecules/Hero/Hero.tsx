@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         />
         <p className={`text-paragraph-${Size}`}>
           Progetto e sviluppo siti web su misura, pensati per le esigenze dei
-          tuoi utenti, per offrire esperienze coinvolgenti, intuitive e
+          tuoi utenti, al fine di offrire esperienze coinvolgenti, intuitive e
           funzionali.
         </p>
       </div>

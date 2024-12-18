@@ -19,7 +19,7 @@
 
     .description {
       display: flex;
-      gap: $gap-2;
+      gap: $gap-3;
       width: calc(100% / 2 - $gap-8);
       align-items: start;
 
@@ -75,7 +75,6 @@
 
     .service-container {
       display: flex;
-      gap: $gap-7;
       margin: 4rem auto;
 
       .service {
@@ -139,7 +138,7 @@
 
   .about-secondary {
     .service-container {
-      gap: $gap-3;
+      gap: $gap-4;
     }
   }
 }
