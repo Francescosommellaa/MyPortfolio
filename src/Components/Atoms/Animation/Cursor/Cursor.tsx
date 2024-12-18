@@ -9,6 +9,7 @@ interface cursorprops {
 
 const Cursor: React.FC<cursorprops> = ({ light = false }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isVisible, setIsVisible] = useState(true);
   const [isAbsorbed, setIsAbsorbed] = useState(false);
   const [isInput, setIsInput] = useState(false);
   const [isText, setIsText] = useState(false);
@@ -17,6 +18,11 @@ const Cursor: React.FC<cursorprops> = ({ light = false }) => {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setCursorPosition({ x: e.clientX, y: e.clientY });
+      setIsVisible(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsVisible(false);
     };
 
     const handleLinkHover = () => setIsAbsorbed(true);
@@ -35,9 +41,7 @@ const Cursor: React.FC<cursorprops> = ({ light = false }) => {
     // Select all links and buttons
     const interactiveElements = document.querySelectorAll("a, button");
     const inputElements = document.querySelectorAll("input, textarea");
-    const textElements = document.querySelectorAll(
-      "p,span, h1, h2, h3, h4, h5, h6"
-    );
+    const textElements = document.querySelectorAll("p,span, h4, h5, h6");
 
     // Add event listeners to all interactive elements
     interactiveElements.forEach((element) => {
@@ -56,10 +60,12 @@ const Cursor: React.FC<cursorprops> = ({ light = false }) => {
     });
 
     window.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseleave", handleMouseLeave);
 
     // Cleanup
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseleave", handleMouseLeave);
       interactiveElements.forEach((element) => {
         element.removeEventListener("mouseenter", handleLinkHover);
         element.removeEventListener("mouseleave", handleLinkLeave);
@@ -77,9 +83,11 @@ const Cursor: React.FC<cursorprops> = ({ light = false }) => {
 
   return (
     <div
-      className={`custom-cursor ${isAbsorbed ? "absorbed" : ""} ${
-        light ? "light" : ""
-      } ${isInput ? "input-cursor" : ""} ${isText ? "text-cursor" : ""}`}
+      className={`custom-cursor ${isVisible ? "visible" : "hidden"} ${
+        isAbsorbed ? "absorbed" : ""
+      } ${light ? "light" : ""} ${isInput ? "input-cursor" : ""} ${
+        isText ? "text-cursor" : ""
+      }`}
       style={{
         left: `${cursorPosition.x}px`,
         top: `${cursorPosition.y}px`,
