@@ -19,8 +19,7 @@ const Hero: React.FC = () => {
 
   useEffect(() => {
     const timeoutIds: number[] = [];
-    const randomChars =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789≠ ";
+    const randomChars = "abcdefghijklmnopqrstuvwxyz≠ ";
     const textArray = targetText.split("");
 
     // Funzione per aggiornare una lettera alla volta
@@ -45,13 +44,13 @@ const Hero: React.FC = () => {
               if (i === textArray.length - 3) {
                 setTimeout(() => setIsAnimationComplete(true));
               }
-            }, (animationDuration / textArray.length) * 800);
-          }, (i * animationDuration * 800) / textArray.length)
+            }, (animationDuration / textArray.length) * 600);
+          }, (i * animationDuration * 600) / textArray.length)
         );
       }
     };
 
-    setAnimatedText("-".repeat(targetText.length));
+    setAnimatedText(" ".repeat(targetText.length));
     animateText();
 
     return () => timeoutIds.forEach((id) => clearTimeout(id)); // Cleanup corretto

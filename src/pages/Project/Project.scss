@@ -14,7 +14,10 @@
   .img-container {
     display: flex;
     gap: $gap-4;
-    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
   }
 
   .main-info {
@@ -64,8 +67,17 @@
     }
   }
 
+  @include respond-to(tablet) {
+    .img-container {
+      img {
+        height: 332px;
+      }
+    }
+  }
+
   @include respond-to(mobile) {
     padding: $padding-M;
+    margin: 4rem auto;
     .img-container {
       img {
         width: 280px;
@@ -90,18 +102,5 @@
         }
       }
     }
-  }
-
-  @include respond-to(tablet) {
-    .img-container {
-      img {
-        height: 332px;
-      }
-    }
-  }
-
-  @include respond-to(mobile) {
-    padding: $padding-M;
-    margin: 4rem auto;
   }
 }
