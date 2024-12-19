@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
   useEffect(() => {
     if (withIcon && size && iconName) {
       const svgPath = new URL(
-        `/src/Assets/Icon-Tools/Icon/Name=${iconName}, Dimension=${size}.svg`,
+        `/src/Assets/Icon/Name=${iconName}, Dimension=${size}.svg`,
         import.meta.url
       ).href;
 

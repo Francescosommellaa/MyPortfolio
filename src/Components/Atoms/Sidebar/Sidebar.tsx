@@ -12,11 +12,11 @@ import NavLink from "../../DB/NavLink";
 import SocialLinks from "../../DB/Social";
 
 const menuIcon = new URL(
-  "/src/Assets/Icon-Tools/Icon/Name=menu, Dimension=M.svg",
+  "/src/Assets/Icon/Name=menu, Dimension=M.svg",
   import.meta.url
 ).href;
 const closeIcon = new URL(
-  "/src/Assets/Icon-Tools/Icon/Name=Close, Dimension=M.svg",
+  "/src/Assets/Icon/Name=Close, Dimension=M.svg",
   import.meta.url
 ).href;
 

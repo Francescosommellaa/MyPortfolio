@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
           <img
             src={
               new URL(
-                "/src/Assets/Icon-Tools/Icon/Name=arrow-down, Dimension=M.svg",
+                "/src/Assets/Icon/Name=arrow-down, Dimension=M.svg",
                 import.meta.url
               ).href
             }
