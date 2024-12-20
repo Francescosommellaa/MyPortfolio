@@ -7,9 +7,6 @@
   padding: 0;
   box-sizing: border-box;
   cursor: none;
-
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 }
 
 body {
@@ -50,119 +47,97 @@ body {
   a {
     width: fit-content;
   }
-  h1 {
-    @include typography(
-      $font-title,
+
+  $headings: (
+    h1: (
       $h1-font-size,
       $h1-line-height,
-      $h1-font-weight
-    );
-  }
-
-  h2 {
-    @include typography(
-      $font-title,
+      $h1-font-weight,
+    ),
+    h2: (
       $h2-font-size,
       $h2-line-height,
-      $h2-font-weight
-    );
-  }
-
-  h3 {
-    @include typography(
-      $font-title,
+      $h2-font-weight,
+    ),
+    h3: (
       $h3-font-size,
       $h3-line-height,
-      $h3-font-weight
-    );
-  }
-
-  h4 {
-    @include typography(
-      $font-title,
+      $h3-font-weight,
+    ),
+    h4: (
       $h4-font-size,
       $h4-line-height,
-      $h4-font-weight
-    );
-  }
-
-  h5 {
-    @include typography(
-      $font-title,
+      $h4-font-weight,
+    ),
+    h5: (
       $h5-font-size,
       $h5-line-height,
-      $h5-font-weight
-    );
-  }
-
-  h6 {
-    @include typography(
-      $font-title,
+      $h5-font-weight,
+    ),
+    h6: (
       $h6-font-size,
       $h6-line-height,
-      $h6-font-weight
-    );
+      $h6-font-weight,
+    ),
+  );
+
+  @each $tag, $values in $headings {
+    #{$tag} {
+      @include typography(
+        $font-title,
+        nth($values, 1),
+        nth($values, 2),
+        nth($values, 3)
+      );
+    }
   }
 
-  // SubTitle
-  .subtitle-L {
-    @include typography(
-      $font-body,
+  // Text Styles
+  $text-styles: (
+    "subtitle-L": (
       $subtitle-l-font-size,
       $subtitle-l-line-height,
-      $subtitle-l-font-weight
-    );
-  }
-  .subtitle-M {
-    @include typography(
-      $font-body,
+      $subtitle-l-font-weight,
+    ),
+    "subtitle-M": (
       $subtitle-m-font-size,
       $subtitle-m-line-height,
-      $subtitle-m-font-weight
-    );
-  }
-  .subtitle-S {
-    @include typography(
-      $font-body,
+      $subtitle-m-font-weight,
+    ),
+    "subtitle-S": (
       $subtitle-s-font-size,
       $subtitle-s-line-height,
-      $subtitle-s-font-weight
-    );
-  }
-
-  // Text
-  .text-paragraph-L {
-    @include typography(
-      $font-body,
+      $subtitle-s-font-weight,
+    ),
+    "text-paragraph-L": (
       $paragraph-l-font-size,
       $paragraph-l-line-height,
-      $paragraph-l-font-weight
-    );
-  }
-  .text-paragraph-M {
-    @include typography(
-      $font-body,
+      $paragraph-l-font-weight,
+    ),
+    "text-paragraph-M": (
       $paragraph-m-font-size,
       $paragraph-m-line-height,
-      $paragraph-m-font-weight
-    );
-  }
-  .text-paragraph-S {
-    @include typography(
-      $font-body,
+      $paragraph-m-font-weight,
+    ),
+    "text-paragraph-S": (
       $paragraph-s-font-size,
       $paragraph-s-line-height,
-      $paragraph-s-font-weight
-    );
-  }
-
-  // Placeholder
-  .text-placeholder {
-    @include typography(
-      $font-body,
+      $paragraph-s-font-weight,
+    ),
+    "text-placeholder": (
       $placeholder-font-size,
       $placeholder-line-height,
-      $placeholder-font-weight
-    );
+      $placeholder-font-weight,
+    ),
+  );
+  @each $class, $values in $text-styles {
+    .#{$class} {
+      @include typography(
+        $font-body,
+        nth($values, 1),
+        nth($values, 2),
+        nth($values, 3)
+      );
+    }
   }
 }
