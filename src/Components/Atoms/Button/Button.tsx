@@ -9,6 +9,8 @@ interface ButtonProps {
   text?: string;
   withIcon?: boolean;
   light?: boolean;
+  withBorder?: boolean;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -17,6 +19,8 @@ const Button: React.FC<ButtonProps> = ({
   iconName,
   light = false,
   withIcon = true,
+  withBorder = true,
+  onClick = () => {},
 }) => {
   const svgRef = useRef<HTMLDivElement>(null);
 
@@ -40,7 +44,12 @@ const Button: React.FC<ButtonProps> = ({
     }
   }, [size, withIcon, iconName]);
   return (
-    <button className={`btn btn-${size} ${light ? "light" : ""}`}>
+    <button
+      className={`btn btn-${size} ${light ? "light" : ""} ${
+        withBorder ? `border-${size}` : ""
+      }`}
+      onClick={onClick}
+    >
       {text}
       {withIcon && size && iconName && (
         <div className="icon" ref={svgRef} aria-hidden="true" />
