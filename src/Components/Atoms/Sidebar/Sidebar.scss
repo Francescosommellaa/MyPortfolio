@@ -20,7 +20,7 @@
   transform: translateY(-100%);
   visibility: hidden;
   transition: all 0.8s ease-in-out;
-  z-index: 1000;
+  z-index: 900;
   padding: $padding-M;
 
   &.open {

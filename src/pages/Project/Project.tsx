@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
@@ -19,6 +19,10 @@ const Project: React.FC = () => {
   const Size = useSize();
   const { slug } = useParams<{ slug: string }>();
   const project = Projects.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!project) {
     return Size === "S" ? (

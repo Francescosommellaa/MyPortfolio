@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer" aria-label="Footer">
-      <Cursor light={true} />
+      <Cursor />
       {/* Logo */}
       <Logo size="S" light={true} />
 

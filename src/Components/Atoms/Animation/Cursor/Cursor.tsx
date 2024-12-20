@@ -3,11 +3,7 @@ import React, { useEffect, useState } from "react";
 // SCSS
 import "./Cursor.scss";
 
-interface cursorprops {
-  light?: boolean;
-}
-
-const Cursor: React.FC<cursorprops> = ({ light = false }) => {
+const Cursor: React.FC = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(true);
   const [isAbsorbed, setIsAbsorbed] = useState(false);
@@ -85,9 +81,7 @@ const Cursor: React.FC<cursorprops> = ({ light = false }) => {
     <div
       className={`custom-cursor ${isVisible ? "visible" : "hidden"} ${
         isAbsorbed ? "absorbed" : ""
-      } ${light ? "light" : ""} ${isInput ? "input-cursor" : ""} ${
-        isText ? "text-cursor" : ""
-      }`}
+      }  ${isInput ? "input-cursor" : ""} ${isText ? "text-cursor" : ""}`}
       style={{
         left: `${cursorPosition.x}px`,
         top: `${cursorPosition.y}px`,

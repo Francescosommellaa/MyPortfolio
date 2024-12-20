@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
 // SCSS
@@ -15,6 +15,10 @@ import { useSize } from "../../Hooks/useSize";
 
 const Parliamo: React.FC = () => {
   const Size = useSize();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <main className="parliamo" aria-label="Parliamo Page">

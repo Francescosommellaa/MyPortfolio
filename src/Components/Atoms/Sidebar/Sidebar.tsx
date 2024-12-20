@@ -8,7 +8,6 @@ import "./Sidebar.scss";
 import Logo from "../Logo/Logo";
 
 // DB
-import NavLink from "../../DB/NavLink";
 import SocialLinks from "../../DB/Social";
 
 const menuIcon = new URL(
@@ -63,18 +62,6 @@ const Sidebar: React.FC = () => {
           >
             <h4>Home</h4>
           </Link>
-          {NavLink.map((link) => (
-            <Link
-              key={link.name}
-              to={link.url}
-              onClick={toggleSidebar}
-              className={`nav-link ${
-                location.pathname === link.url ? "active" : ""
-              }`}
-            >
-              <h4>{link.name}</h4>
-            </Link>
-          ))}
         </nav>
 
         {/* Links sociali */}
