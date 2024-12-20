@@ -9,19 +9,19 @@ import Footer from "./Components/Molecules/Footer/Footer";
 
 // pages
 import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
 import Parliamo from "./Pages/Parliamo/Parliamo";
 import Project from "./Pages/Project/Project";
+import Cursor from "./Components/Atoms/Animation/Cursor/Cursor";
 
 const App: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
+        <Cursor />
         <Navbar />
         <AnimatePresence mode="wait">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/parliamo" element={<Parliamo />} />
             <Route path="/project/:slug" element={<Project />} />
           </Routes>
