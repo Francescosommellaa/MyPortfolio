@@ -34,46 +34,41 @@ const Cursor: React.FC = () => {
     };
     const handleTextLeave = () => setIsText(false);
 
-    // Select all links and buttons
-    const interactiveElements = document.querySelectorAll("a, button");
-    const inputElements = document.querySelectorAll("input, textarea");
-    const textElements = document.querySelectorAll("p,span, h4, h5, h6");
+    const addEventListeners = () => {
+      // Select all links and buttons
+      const interactiveElements = document.querySelectorAll("a, button");
+      const inputElements = document.querySelectorAll("input, textarea");
+      const textElements = document.querySelectorAll("p,span, h4, h5, h6");
 
-    // Add event listeners to all interactive elements
-    interactiveElements.forEach((element) => {
-      element.addEventListener("mouseenter", handleLinkHover);
-      element.addEventListener("mouseleave", handleLinkLeave);
-    });
+      // Add event listeners to all interactive elements
+      interactiveElements.forEach((element) => {
+        element.addEventListener("mouseenter", handleLinkHover);
+        element.addEventListener("mouseleave", handleLinkLeave);
+      });
 
-    inputElements.forEach((element) => {
-      element.addEventListener("mouseenter", handleInputHover);
-      element.addEventListener("mouseleave", handleInputLeave);
-    });
+      inputElements.forEach((element) => {
+        element.addEventListener("mouseenter", handleInputHover);
+        element.addEventListener("mouseleave", handleInputLeave);
+      });
 
-    textElements.forEach((element) => {
-      element.addEventListener("mouseenter", handleTextHover);
-      element.addEventListener("mouseleave", handleTextLeave);
-    });
+      textElements.forEach((element) => {
+        element.addEventListener("mouseenter", handleTextHover);
+        element.addEventListener("mouseleave", handleTextLeave);
+      });
+    };
+
+    addEventListeners();
+
+    const observer = new MutationObserver(addEventListeners);
+    observer.observe(document.body, { childList: true, subtree: true });
 
     window.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("mouseleave", handleMouseLeave);
 
-    // Cleanup
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseleave", handleMouseLeave);
-      interactiveElements.forEach((element) => {
-        element.removeEventListener("mouseenter", handleLinkHover);
-        element.removeEventListener("mouseleave", handleLinkLeave);
-      });
-      inputElements.forEach((element) => {
-        element.removeEventListener("mouseenter", handleInputHover);
-        element.removeEventListener("mouseleave", handleInputLeave);
-      });
-      textElements.forEach((element) => {
-        element.removeEventListener("mouseenter", handleTextHover);
-        element.removeEventListener("mouseleave", handleTextLeave);
-      });
+      window.removeEventListener("mouseleave", handleMouseLeave);
+      observer.disconnect();
     };
   }, []);
 

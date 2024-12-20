@@ -16,8 +16,8 @@ import Cursor from "./Components/Atoms/Animation/Cursor/Cursor";
 const App: React.FC = () => {
   return (
     <HelmetProvider>
-      <Cursor />
       <Router>
+        <Cursor />
         <Navbar />
         <AnimatePresence mode="wait">
           <Routes>
