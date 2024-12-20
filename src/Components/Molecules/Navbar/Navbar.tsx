@@ -9,6 +9,9 @@ import "./Navbar.scss";
 import Logo from "../../Atoms/Logo/Logo";
 import Sidebar from "../../Molecules/Sidebar/Sidebar";
 
+// DB
+import PageNav from "../../DB/PageNav";
+
 const Navbar: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -29,37 +32,28 @@ const Navbar: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
     Events.scrollEvent.register("end", (to: string) => {
       setActiveSection(to);
     });
 
     return () => {
+      window.removeEventListener("scroll", handleScroll);
       Events.scrollEvent.remove("end");
     };
   }, []);
 
   const handleScroll = (section: string) => {
+    const scrollOptions = {
+      smooth: true,
+      duration: 500,
+      offset: -60,
+    };
+
     if (location.pathname !== "/") {
       navigate("/");
-      setTimeout(() => {
-        scroller.scrollTo(section, {
-          smooth: true,
-          duration: 500,
-          offset: -60,
-        });
-      }, 100);
+      setTimeout(() => scroller.scrollTo(section, scrollOptions), 100);
     } else {
-      scroller.scrollTo(section, {
-        smooth: true,
-        duration: 500,
-        offset: -60,
-      });
+      scroller.scrollTo(section, scrollOptions);
     }
   };
 
@@ -71,28 +65,21 @@ const Navbar: React.FC = () => {
         <div className="divider" />
 
         <ul className="nav-links">
-          <li>
-            <a
-              className={`nav-link ${
-                activeSection === "about" ? "active" : ""
-              }`}
-              onClick={() => handleScroll("about")}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              className={`nav-link ${
-                activeSection === "lavori" ? "active" : ""
-              }`}
-              onClick={() => handleScroll("lavori")}
-            >
-              Lavori
-            </a>
-          </li>
+          {PageNav.map((page) => (
+            <li key={page.id}>
+              <a
+                className={`nav-link ${
+                  activeSection === `${page.url}` ? "active" : ""
+                }`}
+                onClick={() => handleScroll(`${page.url}`)}
+              >
+                {page.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
+
       {/* Parliamo */}
       <ul className="nav-links">
         <li>

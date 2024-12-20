@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
 
 // SCSS
 import "./Sidebar.scss";
@@ -9,6 +10,7 @@ import Logo from "../../Atoms/Logo/Logo";
 
 // DB
 import SocialLinks from "../../DB/Social";
+import PageNav from "../../DB/PageNav";
 
 const menuIcon = new URL(
   "/src/Assets/Icon/Name=menu, Dimension=M.svg",
@@ -21,6 +23,7 @@ const closeIcon = new URL(
 
 const Sidebar: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -35,6 +38,22 @@ const Sidebar: React.FC = () => {
     }
     return () => document.body.classList.remove("no-scroll");
   }, [isOpen]);
+
+  const handleScroll = (section: string) => {
+    const scrollOptions = {
+      smooth: true,
+      duration: 500,
+      offset: -60,
+    };
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => scroller.scrollTo(section, scrollOptions), 100);
+    } else {
+      scroller.scrollTo(section, scrollOptions);
+    }
+    toggleSidebar();
+  };
 
   return (
     <nav className="sidebar-container" aria-label="Sidebar">
@@ -53,14 +72,18 @@ const Sidebar: React.FC = () => {
 
         {/* Navigazione */}
         <nav className="sidebar-nav">
-          <Link
-            to="/"
-            onClick={toggleSidebar}
-            className={`nav-link ${
-              location.pathname === "/Home" ? "active" : ""
-            }`}
-          >
+          <a onClick={() => handleScroll(`hero`)}>
             <h4>Home</h4>
+          </a>
+
+          {PageNav.map((page) => (
+            <a key={page.id} onClick={() => handleScroll(`${page.url}`)}>
+              <h4>{page.name}</h4>
+            </a>
+          ))}
+
+          <Link to="/parliamo" onClick={toggleSidebar}>
+            <h4>Parliamo</h4>
           </Link>
         </nav>
 
