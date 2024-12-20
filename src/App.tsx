@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { AnimatePresence } from "motion/react";
 
 // Molecules
 import Navbar from "./Components/Molecules/Navbar/Navbar";
@@ -19,13 +18,11 @@ const App: React.FC = () => {
       <Router>
         <Cursor />
         <Navbar />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/parliamo" element={<Parliamo />} />
-            <Route path="/project/:slug" element={<Project />} />
-          </Routes>
-        </AnimatePresence>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/parliamo" element={<Parliamo />} />
+          <Route path="/project/:slug" element={<Project />} />
+        </Routes>
         <Footer />
       </Router>
     </HelmetProvider>

@@ -38,7 +38,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <main aria-label="Home Page">
+    <section aria-label="Home Page">
       <GoTop />
 
       <section id="hero" data-title="Designer & Developer">
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
       <section id="lavori" data-title="Lavori">
         <Work />
       </section>
-    </main>
+    </section>
   );
 };
 

@@ -58,26 +58,28 @@ const Sidebar: React.FC = () => {
   return (
     <nav className="sidebar-container" aria-label="Sidebar">
       {/* Icona del menu */}
-      <a className="menu-icon" onClick={toggleSidebar}>
+      <button className="menu-icon" onClick={toggleSidebar}>
         <img src={!isOpen ? menuIcon : closeIcon} alt="Close menu" />
-      </a>
+      </button>
 
       {/* Sidebar */}
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <div className="sidebar-header">
-          <Link to="/" onClick={toggleSidebar}>
-            <Logo size={"S"} />
-          </Link>
+          <Logo size={"S"} onClick={toggleSidebar} />
         </div>
 
         {/* Navigazione */}
         <nav className="sidebar-nav">
-          <a onClick={() => handleScroll(`hero`)}>
+          <a onClick={() => handleScroll(`hero`)} role="button">
             <h4>Home</h4>
           </a>
 
           {PageNav.map((page) => (
-            <a key={page.id} onClick={() => handleScroll(`${page.url}`)}>
+            <a
+              key={page.id}
+              onClick={() => handleScroll(`${page.url}`)}
+              role="button"
+            >
               <h4>{page.name}</h4>
             </a>
           ))}
