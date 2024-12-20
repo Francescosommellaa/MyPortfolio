@@ -5,7 +5,7 @@ import FormInfo from "../../DB/FormInfo";
 import "./Form.scss";
 
 // Atoms
-import Button from "../Button/Button";
+import Button from "../../Atoms/Button/Button";
 
 interface FormDataprops {
   size: "S" | "M" | "L";

@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import "./Parliamo.scss";
 
 // Components
-import Form from "../../Components/Atoms/Form/Form";
+import Form from "../../Components/Molecules/Form/Form";
 
 // Hooks
 import { useSize } from "../../Hooks/useSize";

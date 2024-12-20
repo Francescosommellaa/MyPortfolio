@@ -11,7 +11,7 @@ import Footer from "./Components/Molecules/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import Parliamo from "./Pages/Parliamo/Parliamo";
 import Project from "./Pages/Project/Project";
-import Cursor from "./Components/Atoms/Animation/Cursor/Cursor";
+import Cursor from "./Components/Atoms/Interaction/Cursor/Cursor";
 
 const App: React.FC = () => {
   return (

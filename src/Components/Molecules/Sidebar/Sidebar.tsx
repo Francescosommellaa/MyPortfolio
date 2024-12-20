@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.scss";
 
 // Atoms
-import Logo from "../Logo/Logo";
+import Logo from "../../Atoms/Logo/Logo";
 
 // DB
 import SocialLinks from "../../DB/Social";

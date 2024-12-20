@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 // SCSS
 import "./Cursor.scss";
@@ -10,6 +11,8 @@ const Cursor: React.FC = () => {
   const [isInput, setIsInput] = useState(false);
   const [isText, setIsText] = useState(false);
   const [textHeight, setTextHeight] = useState(24);
+
+  const location = useLocation();
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -35,12 +38,10 @@ const Cursor: React.FC = () => {
     const handleTextLeave = () => setIsText(false);
 
     const addEventListeners = () => {
-      // Select all links and buttons
       const interactiveElements = document.querySelectorAll("a, button");
       const inputElements = document.querySelectorAll("input, textarea");
       const textElements = document.querySelectorAll("p,span, h4, h5, h6");
 
-      // Add event listeners to all interactive elements
       interactiveElements.forEach((element) => {
         element.addEventListener("mouseenter", handleLinkHover);
         element.addEventListener("mouseleave", handleLinkLeave);
@@ -70,7 +71,13 @@ const Cursor: React.FC = () => {
       window.removeEventListener("mouseleave", handleMouseLeave);
       observer.disconnect();
     };
-  }, []);
+  }, [location]);
+
+  useEffect(() => {
+    setIsAbsorbed(false);
+    setIsInput(false);
+    setIsText(false);
+  }, [location]);
 
   return (
     <div

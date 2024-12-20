@@ -18,6 +18,18 @@
   align-items: center;
   justify-content: space-between;
 
+  .nav-header {
+    display: flex;
+    align-items: center;
+    gap: $gap-3;
+
+    .divider {
+      height: 16px;
+      width: 1px;
+      background-color: $gray-scale-6;
+    }
+  }
+
   .nav-links {
     display: flex;
     gap: $gap-3;
@@ -37,7 +49,7 @@
         color: $gray-scale--1;
       }
 
-      &.active::after {
+      &-page.active::after {
         content: "";
         position: absolute;
         bottom: -10px;

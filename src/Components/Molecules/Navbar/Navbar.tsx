@@ -7,7 +7,7 @@ import "./Navbar.scss";
 
 // Atoms
 import Logo from "../../Atoms/Logo/Logo";
-import Sidebar from "../../Atoms/Sidebar/Sidebar";
+import Sidebar from "../../Molecules/Sidebar/Sidebar";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -65,29 +65,40 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar">
-      <Logo size={"S"} />
+      <div className="nav-header">
+        <Logo size={"S"} />
 
+        <div className="divider" />
+
+        <ul className="nav-links">
+          <li>
+            <a
+              className={`nav-link ${
+                activeSection === "about" ? "active" : ""
+              }`}
+              onClick={() => handleScroll("about")}
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              className={`nav-link ${
+                activeSection === "lavori" ? "active" : ""
+              }`}
+              onClick={() => handleScroll("lavori")}
+            >
+              Lavori
+            </a>
+          </li>
+        </ul>
+      </div>
+      {/* Parliamo */}
       <ul className="nav-links">
-        <li>
-          <a
-            className={`nav-link ${activeSection === "about" ? "active" : ""}`}
-            onClick={() => handleScroll("about")}
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            className={`nav-link ${activeSection === "lavori" ? "active" : ""}`}
-            onClick={() => handleScroll("lavori")}
-          >
-            Lavori
-          </a>
-        </li>
         <li>
           <Link
             to="/parliamo"
-            className={`nav-link ${
+            className={`nav-link nav-link-page ${
               location.pathname === "/parliamo" ? "active" : ""
             }`}
           >

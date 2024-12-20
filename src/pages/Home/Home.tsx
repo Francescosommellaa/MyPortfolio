@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 // Atoms
-import GoTop from "../../Components/Atoms/Animation/GoTop/GoTop";
+import GoTop from "../../Components/Atoms/Interaction/GoTop/GoTop";
 
 // Molecules
 import Hero from "../../Components/Molecules/Hero/Hero";
