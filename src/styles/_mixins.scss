@@ -39,7 +39,10 @@
 // ====================
 //Mixin per i bottoni seccondari
 
-@mixin btn($btn-font-size, $btn-border-weight) {
+@mixin btn-font($btn-font-size) {
   font-size: $btn-font-size;
+}
+
+@mixin btn-border($btn-border-weight) {
   border: $btn-border-weight;
 }
