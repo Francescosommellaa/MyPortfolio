@@ -12,10 +12,9 @@ import { useSize } from "../../../Hooks/useSize";
 const Work: React.FC = () => {
   const Size = useSize();
   return (
-    <section className="work-container" aria-label="Work Section">
-      {/* work cards */}
+    <main className="work-container">
       <WorkCards size={Size} />
-    </section>
+    </main>
   );
 };
 

@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { Helmet } from "react-helmet-async";
 
 // SCSS
 import "./About.scss";
-
-// Atoms
-import Cursor from "../../Atoms/Animation/Cursor/Cursor";
 
 // DB
 import AboutText from "../../DB/AboutText";
@@ -27,13 +23,7 @@ const About: React.FC = () => {
   const Size = useSize();
 
   return (
-    <main className="about" aria-label="About Page">
-      <Cursor />
-      {/* Titolo dinamico */}
-      <Helmet>
-        <title>Design by Fra | About</title>
-      </Helmet>
-
+    <main className="about">
       {Size === "S" ? (
         <h2>Supporto i Brand al Successo Digitale</h2>
       ) : Size === "M" ? (

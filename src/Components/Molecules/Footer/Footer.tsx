@@ -6,7 +6,6 @@ import "./Footer.scss";
 // Atoms
 import Button from "../../Atoms/Button/Button";
 import Logo from "../../Atoms/Logo/Logo";
-import Cursor from "../../Atoms/Animation/Cursor/Cursor";
 
 // DB
 import SocialLinks from "../../DB/Social";
@@ -19,7 +18,6 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer" aria-label="Footer">
-      <Cursor />
       {/* Logo */}
       <Logo size="S" light={true} />
 

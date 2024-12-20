@@ -9,7 +9,7 @@
   background-color: $gray-scale--1;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 1000;
+  z-index: 10000;
   transform: translate(-50%, -50%);
   transition: transition, width, height 0.4s ease, opacity 0.4s ease;
   mix-blend-mode: difference;

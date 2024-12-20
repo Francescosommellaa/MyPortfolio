@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import { Element } from "react-scroll";
 
 // Atoms
 import GoTop from "../../Components/Atoms/Animation/GoTop/GoTop";
@@ -15,21 +13,45 @@ const Home: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+          currentSection = section.getAttribute("data-title") || "";
+        }
+      });
+
+      if (currentSection) {
+        document.title = `Design by Fra | ${currentSection}`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <main aria-label="Home Page">
       <GoTop />
-      {/* Titolo dinamico */}
-      <Helmet>
-        <title>Design by Fra | Designer & Developer</title>
-      </Helmet>
 
-      <Hero />
-      <Element name="about">
+      <section id="hero" data-title="Designer & Developer">
+        <Hero />
+      </section>
+
+      <section id="about" data-title="About">
         <About />
-      </Element>
-      <Element name="lavori">
+      </section>
+
+      <section id="lavori" data-title="Lavori">
         <Work />
-      </Element>
+      </section>
     </main>
   );
 };

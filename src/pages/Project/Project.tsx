@@ -7,7 +7,6 @@ import "./Project.scss";
 
 // Atoms
 import Button from "../../Components/Atoms/Button/Button";
-import Cursor from "../../Components/Atoms/Animation/Cursor/Cursor";
 
 // DB
 import Projects from "../../Components/DB/Projects";
@@ -46,7 +45,6 @@ const Project: React.FC = () => {
 
   return (
     <main className="project-container" aria-label="Project Page">
-      <Cursor />
       {/* Titolo dinamicop */}
       <Helmet>
         <title>Design by Fra | {title}</title>
